@@ -53,24 +53,35 @@ export function About() {
 
             <p className="text-muted-foreground mb-6">
               With over a decade advising executive and senior leadership on
-              risk, I've built a track record of translating complex security
-              challenges into actionable business strategies. Founded Cygnet
-              Security in 2018 to deliver bespoke consulting that moves beyond
-              compliance checkboxes to create real, measurable security value.
+              risk, I've delivered transformative security outcomes for organizations ranging from 
+              UK government departments to Fortune 500 multinationals. From leading proactive responses 
+              to critical threats (Log4J) to driving ISO27001 accreditations and managing vulnerability 
+              programs across 60,000+ endpoints globally—I translate complex security challenges into 
+              actionable business strategies.
+            </p>
+
+            <p className="text-muted-foreground mb-6">
+              Founded Cygnet Security in 2018 to deliver bespoke consulting that moves beyond
+              compliance checkboxes. My work spans vulnerability management, threat modeling, security 
+              transformation, and strategic advisory—always connecting technical security to measurable 
+              business outcomes.
             </p>
 
             <div className="flex flex-wrap gap-3">
               <Badge variant="secondary" data-testid="badge-cert-1">
-                CISSP Certified
+                CREST Certified
               </Badge>
               <Badge variant="secondary" data-testid="badge-cert-2">
-                CISM
+                Penetration Testing
               </Badge>
               <Badge variant="secondary" data-testid="badge-cert-3">
-                Cloud Security
+                AWS & Azure
               </Badge>
               <Badge variant="secondary" data-testid="badge-cert-4">
-                Risk Management
+                ISO27001
+              </Badge>
+              <Badge variant="secondary" data-testid="badge-cert-5">
+                PCI-DSS
               </Badge>
             </div>
           </div>

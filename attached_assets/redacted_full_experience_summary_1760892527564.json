@@ -1,0 +1,70 @@
+[
+  {
+    "Size & Scope": "A major UK government department responsible for delivering justice services across hundreds of locations, employing thousands of staff.",
+    "Your Impact": "Led proactive mitigation of critical vulnerabilities (e.g., Log4J), deployed Tenable.SC, and implemented a scalable federated VM model. Conducted threat modeling for sensitive legal data systems, identified architectural risks, and secured funding for remediation\u2014driving strategic improvements in cross-departmental security."
+  },
+  {
+    "Size & Scope": "A UK government-owned financial institution managing multi-billion-pound student loan portfolios and serving millions of customers.",
+    "Your Impact": "Provided security assurance for transformation projects, including high-availability and disaster recovery systems. Delivered tailored risk assessments, ensured compliance with PCI-DSS and HMG standards, and supported risk owners with actionable insights\u2014enhancing project security and regulatory alignment."
+  },
+  {
+    "Size & Scope": "A Fortune 500 multinational corporation with tens of thousands of employees and operations in over 170 countries.",
+    "Your Impact": "Initiated a global VM workstream across departments, establishing policies and operational models. Provided CISO-level advisory on business risk, outsourcing, and strategic alignment\u2014laying the groundwork for enterprise-wide vulnerability governance."
+  },
+  {
+    "Size & Scope": "A UK-based data services provider in the energy sector, supporting critical infrastructure and regulatory compliance across the gas industry.",
+    "Your Impact": "Acted as a strategic advisor during a major security transformation. Embedded ISO27001-aligned practices, led ISMS improvements, and defined SOC procurement requirements. Delivered regulatory risk insights and implemented a unified controls framework\u2014resulting in ISO27001 accreditation and improved security maturity."
+  },
+  {
+    "Size & Scope": "A UK government department with tens of thousands of employees, responsible for national security, immigration, and law enforcement.",
+    "Your Impact": "Provided application security guidance for a high-profile mobile app supporting post-Brexit identity verification. Conducted secure design reviews, API testing, and AWS architecture assessments\u2014ensuring compliance with security standards and safeguarding sensitive citizen data."
+  },
+  {
+    "Size & Scope": "A UK-based challenger bank offering savings and lending products, with a growing digital footprint and a focus on secure financial services.",
+    "Your Impact": "Led the rollout of VM processes and tooling, integrated security into agile development, and conducted regular pen testing. Delivered risk-based remediation prioritization and ISMS gap analysis\u2014enhancing the bank\u2019s security posture and regulatory readiness."
+  },
+  {
+    "Size & Scope": "A UK-based cybersecurity consultancy acquired by a major managed services provider. Delivered offensive security services to clients across sectors.",
+    "Your Impact": "Progressed from graduate to senior CREST-certified penetration tester. Delivered full lifecycle testing (SAST, DAST, red teaming), specializing in infrastructure and Active Directory. Enabled clients to meet compliance standards (PCI DSS, Cyber Essentials+) and improved cloud security practices across AWS and Azure environments."
+  },
+  {
+    "Size & Scope": "A global leader in marketing data and analytics with ~25,000 employees across 90+ countries. Serves 96 of the world\u2019s top 100 advertisers.",
+    "Your Impact": "Led the strategic overhaul of a vulnerability management service covering 60,000 endpoints. Defined KPIs/KRIs, optimized tooling deployment, and aligned vendor delivery with internal security goals\u2014resulting in improved remediation workflows and risk visibility."
+  },
+  {
+    "Size & Scope": "A multinational technology services business with 800+ employees, delivering digital transformation, cloud, security, and data services globally.",
+    "Your Impact": "Assessed cybersecurity controls across global M&A targets. Delivered CISv8 and ISO27001-aligned assessments, mentored internal assurance teams, and provided risk-based integration guidance\u2014enhancing post-acquisition security posture."
+  },
+  {
+    "Size & Scope": "An international financial institution with \u20ac70B+ in assets and operations in 30+ countries, focused on private sector development and sustainable growth.",
+    "Your Impact": "Streamlined vulnerability management processes and transitioned from outsourced to in-house operations. Led incident response for major threats, improved ROI on tooling, and initiated patch automation\u2014enhancing resilience and reducing time-to-remediate."
+  },
+  {
+    "Size & Scope": "A global design and engineering consultancy with 36,000+ employees in 30+ countries, specializing in infrastructure, water, and urban development.",
+    "Your Impact": "Drove a cultural shift in threat and vulnerability management. Integrated EPSS and SSVC into triage, improved asset tagging, and influenced leadership decisions\u2014resulting in measurable reductions in vulnerability exposure."
+  },
+  {
+    "Size & Scope": "One of Europe\u2019s largest low-cost airlines with 17,000+ employees and operations in 38 countries.",
+    "Your Impact": "Designed the Target Operating Model for vulnerability management, conducted maturity assessments, and implemented risk-based triage aligned to industry frameworks. Provided strategic outsourcing guidance."
+  },
+  {
+    "Size & Scope": "A UK government department with ~19,000 staff across 300+ sites, administering criminal, civil, and family courts and tribunals.",
+    "Your Impact": "Led proactive response to Log4J, deployed Tenable.SC, and implemented a federated vulnerability management model. Identified architectural risks, secured remediation funding, and influenced leadership to prioritize systemic fixes."
+  },
+  {
+    "Size & Scope": "A UK government-owned body with 3,000+ staff managing a \u00a3260B+ loan book for 9.7M customers.",
+    "Your Impact": "Provided security assurance for transformation programs, including HA/DR solutions. Ensured PCI-DSS and HMG compliance, delivered tailored risk assessments, and supported IAOs/IROs with business impact insights."
+  },
+  {
+    "Size & Scope": "A global tobacco and smoke-free products company with 80,000+ employees and $37B+ revenue, operating in 170+ markets.",
+    "Your Impact": "Initiated enterprise-wide vulnerability management rollout. Developed policies, advised on outsourcing models, and aligned security strategy with business risk\u2014establishing a scalable, global capability."
+  },
+  {
+    "Size & Scope": "A UK central data services provider for the gas industry, managing data for 23M+ meter points with 100+ employees.",
+    "Your Impact": "Acted as key advisor during a security transformation. Embedded ISO27001 practices, defined SOC procurement requirements, and led ISMS improvements\u2014culminating in successful accreditation and enhanced compliance."
+  },
+  {
+    "Size & Scope": "The UK\u2019s largest public service department with 84,000+ employees and a \u00a3297B budget, administering welfare and pensions.",
+    "Your Impact": "Defined vulnerability scanning strategy using Tenable.SC, reducing reliance on external pen tests. Engaged vendors to optimize tooling and dashboards\u2014improving visibility and remediation efficiency."
+  }
+]

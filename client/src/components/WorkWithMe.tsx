@@ -5,39 +5,51 @@ import { Building2, TrendingUp, Shield, ArrowRight } from "lucide-react";
 const caseStudies = [
   {
     id: 1,
-    title: "Enterprise Security Transformation",
-    industry: "Financial Services",
-    icon: Building2,
+    title: "Proactive Threat Response at Scale",
+    industry: "UK Government Department (19,000+ staff)",
+    icon: Shield,
     problem:
-      "Fragmented security tools and unclear risk visibility across 200+ applications and cloud infrastructure.",
+      "Critical vulnerability crisis (Log4J) threatening hundreds of locations. Fragmented vulnerability visibility across departments with no centralized management.",
     approach:
-      "Designed unified exposure management framework, consolidated tooling, and implemented risk-based prioritization methodology.",
+      "Led rapid response deploying Tenable.SC enterprise-wide. Implemented federated VM model balancing central oversight with departmental autonomy. Conducted threat modeling for sensitive systems and identified architectural risks.",
     outcome:
-      "Reduced critical exposure backlog by 67% in 6 months. Board-level risk reporting established with clear business impact metrics.",
+      "Secured executive funding for systemic remediation. Established scalable vulnerability governance model. Transformed reactive firefighting into proactive risk management across entire department.",
   },
   {
     id: 2,
-    title: "Vulnerability Management Overhaul",
-    industry: "Healthcare Technology",
-    icon: Shield,
+    title: "Global VM Service Transformation",
+    industry: "Marketing Data & Analytics (60,000 endpoints, 90+ countries)",
+    icon: TrendingUp,
     problem:
-      "Overwhelming vulnerability backlog (10,000+) with no clear remediation strategy or SLA framework.",
+      "Vulnerability management service covering 60,000 endpoints lacked strategic direction. Poor vendor alignment, unclear metrics, and inefficient remediation workflows.",
     approach:
-      "Implemented risk-based triage process, tuned scanning tools, defined SLAs by criticality, and built executive KPI dashboard.",
+      "Led complete strategic overhaul: defined KPIs/KRIs aligned to business risk, optimized tooling deployment, and restructured vendor delivery model. Implemented risk-based prioritization framework.",
     outcome:
-      "Achieved 90% SLA compliance within 90 days. Reduced mean time to remediation by 53%. Established sustainable operating model.",
+      "Measurably improved remediation workflows and risk visibility across global operations. Enhanced vendor accountability through clear success metrics. Established sustainable, scalable VM capability.",
   },
   {
     id: 3,
-    title: "Technical Risk Governance",
-    industry: "SaaS Platform",
-    icon: TrendingUp,
+    title: "Cultural Shift in Vulnerability Management",
+    industry: "Global Engineering Consultancy (36,000+ employees, 30+ countries)",
+    icon: Building2,
     problem:
-      "Disconnect between technical security metrics and business outcomes. Board unable to connect security investment to revenue protection.",
+      "Traditional vulnerability management failing to reduce exposure. Leadership skeptical of security value. No integration of modern risk-based methodologies.",
     approach:
-      "Developed risk taxonomy aligned to business objectives, created KRIs tied to revenue impact, and built quarterly board-ready reporting.",
+      "Drove cultural transformation integrating EPSS and SSVC into triage processes. Improved asset tagging and inventory accuracy. Built executive dashboards showing business impact of vulnerability reduction.",
     outcome:
-      "Secured 40% increase in security budget. Enabled data-driven prioritization. Established security as business enabler, not blocker.",
+      "Measurable reduction in vulnerability exposure. Successfully influenced leadership decisions through data-driven insights. Shifted perception of security from cost center to risk management enabler.",
+  },
+  {
+    id: 4,
+    title: "Security Transformation & ISO27001 Accreditation",
+    industry: "Energy Sector Data Services (Critical Infrastructure)",
+    icon: Shield,
+    problem:
+      "Organization lacked mature security practices and ISO27001 compliance. No formal ISMS, unclear SOC requirements, and regulatory compliance gaps in critical infrastructure provider.",
+    approach:
+      "Acted as strategic advisor embedding ISO27001-aligned practices. Led ISMS improvements, defined SOC procurement requirements, and implemented unified controls framework. Delivered regulatory risk insights.",
+    outcome:
+      "Achieved ISO27001 accreditation. Significantly improved security maturity. Established sustainable compliance framework for critical national infrastructure protection.",
   },
 ];
 
@@ -74,7 +86,7 @@ export function WorkWithMe() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
           {caseStudies.map((study) => {
             const Icon = study.icon;
             return (
