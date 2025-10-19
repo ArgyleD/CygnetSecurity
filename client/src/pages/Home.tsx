@@ -41,11 +41,11 @@ function Contact() {
               <div>
                 <h3 className="font-semibold mb-2">Email</h3>
                 <a
-                  href="mailto:contact@cygnetsecurity.com"
+                  href="mailto:contact@cygnetsecurity.co.uk"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   data-testid="link-contact-email"
                 >
-                  contact@cygnetsecurity.com
+                  contact@cygnetsecurity.co.uk
                 </a>
               </div>
             </div>
@@ -59,11 +59,11 @@ function Contact() {
               <div>
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <a
-                  href="tel:+442012345678"
+                  href="tel:+447917666267"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   data-testid="link-contact-phone"
                 >
-                  +44 (0) 20 1234 5678
+                  +44 (0) 7917 666267
                 </a>
               </div>
             </div>
