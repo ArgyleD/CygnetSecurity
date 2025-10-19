@@ -80,9 +80,6 @@ export function About() {
               <Badge variant="secondary" data-testid="badge-cert-4">
                 ISO27001
               </Badge>
-              <Badge variant="secondary" data-testid="badge-cert-5">
-                PCI-DSS
-              </Badge>
             </div>
           </div>
 
