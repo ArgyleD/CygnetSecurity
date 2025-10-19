@@ -75,7 +75,7 @@ export function About() {
                 Penetration Testing
               </Badge>
               <Badge variant="secondary" data-testid="badge-cert-3">
-                AWS & Azure
+                Red Teaming
               </Badge>
               <Badge variant="secondary" data-testid="badge-cert-4">
                 ISO27001
