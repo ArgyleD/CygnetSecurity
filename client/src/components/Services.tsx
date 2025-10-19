@@ -25,12 +25,13 @@ const services = [
     duration: "4 weeks",
     price: "Contact for pricing",
     description:
-      "Transform overwhelming vulnerability backlogs into a sustainable, risk-based remediation program.",
+      "Transform overwhelming vulnerability backlogs into a sustainable, risk-based remediation program using modern frameworks (EPSS, SSVC, CVSS).",
     deliverables: [
       "Scanning tool tune-up and optimization",
-      "Risk-based vulnerability triage process",
+      "EPSS/SSVC-based triage framework implementation",
+      "Risk-based prioritization replacing pure CVSS scoring",
       "SLA policy by criticality level",
-      "Executive KPI metrics pack",
+      "Executive KPI/KRI dashboard",
       "Operating guide and runbooks",
     ],
   },
@@ -55,11 +56,12 @@ const services = [
     duration: "6-8 weeks",
     price: "Contact for pricing",
     description:
-      "Connect technical security metrics to business outcomes with executive-ready risk reporting framework.",
+      "Connect technical security metrics to business outcomes with executive-ready risk reporting framework aligned to CIS Controls and ISO27001.",
     deliverables: [
       "Business-aligned risk taxonomy",
-      "KRIs and KPIs dashboard",
+      "KRIs and KPIs dashboard with trend analysis",
       "Risk-to-revenue impact methodology",
+      "CIS Controls/ISO27001 gap assessment",
       "Quarterly board-level summary",
       "Executive communication templates",
     ],

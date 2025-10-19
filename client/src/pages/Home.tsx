@@ -1,11 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { Impact } from "@/components/Impact";
 import { WorkWithMe } from "@/components/WorkWithMe";
+import { Sectors } from "@/components/Sectors";
 import { Services } from "@/components/Services";
+import { Standards } from "@/components/Standards";
 import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
 
 function Contact() {
@@ -86,8 +88,11 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <Impact />
         <WorkWithMe />
+        <Sectors />
         <Services />
+        <Standards />
         <About />
         <Contact />
       </main>
