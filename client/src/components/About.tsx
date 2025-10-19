@@ -80,6 +80,15 @@ export function About() {
               <Badge variant="secondary" data-testid="badge-cert-4">
                 ISO27001
               </Badge>
+              <Badge variant="secondary" data-testid="badge-cert-5">
+                Security Operations
+              </Badge>
+              <Badge variant="secondary" data-testid="badge-cert-6">
+                Risk Assessment
+              </Badge>
+              <Badge variant="secondary" data-testid="badge-cert-7">
+                Threat Modelling
+              </Badge>
             </div>
           </div>
 
