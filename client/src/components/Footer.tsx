@@ -30,7 +30,12 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={logoImage} alt="Cygnet Security" className="h-7 w-7" />
+              <img 
+                src={logoImage} 
+                alt="Cygnet Security" 
+                className="h-7 w-7"
+                style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
+              />
               <span className="font-heading font-semibold text-lg">
                 Cygnet Security
               </span>

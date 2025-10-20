@@ -56,7 +56,12 @@ export function Navigation() {
             className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
             data-testid="link-home"
           >
-            <img src={logoImage} alt="Cygnet Security" className="h-8 w-8" />
+            <img 
+              src={logoImage} 
+              alt="Cygnet Security" 
+              className="h-8 w-8"
+              style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
+            />
             <span className="font-heading font-semibold text-xl">
               Cygnet Security
             </span>

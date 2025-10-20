@@ -8,7 +8,12 @@ export default function NotFound() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="text-center">
         <div className="inline-flex p-4 bg-primary/10 rounded-full mb-6">
-          <img src={logoImage} alt="Cygnet Security" className="h-16 w-16" />
+          <img 
+            src={logoImage} 
+            alt="Cygnet Security" 
+            className="h-16 w-16"
+            style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
+          />
         </div>
         <h1
           className="font-heading text-6xl font-bold mb-4"
