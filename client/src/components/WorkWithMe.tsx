@@ -13,7 +13,7 @@ const caseStudies = [
     approach:
       "Led rapid response identifying affected applications, assessing attack vectors, and coordinating remediation. Implemented a federated response model balancing central oversight with departmental autonomy.",
     outcome:
-      "Secured executive funding for systemic remediation. Established scalable vulnerability governance model. Transformed reactive firefighting into proactive risk management across entire department.",
+      "Secured management backing for systemic remediation. Established scalable vulnerability governance model. Transformed reactive firefighting into proactive risk management across entire department.",
   },
   {
     id: 2,
