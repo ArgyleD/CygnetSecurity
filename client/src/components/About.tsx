@@ -43,18 +43,14 @@ export function About() {
 
             <blockquote className="border-l-4 border-primary pl-6 mb-8">
               <p className="text-lg text-muted-foreground italic leading-relaxed">
-                "I blend business acumen with deep security expertise to design
-                and operate assurance processes that connect risk to business
-                outcomes. I address root causes behind vulnerabilities, using
-                proactive observations to enhance risk management, drive
-                transformation, and reduce risk while protecting revenue."
+                "Cybersecurity doesn't have to be a cost centre. With the right assurance, it becomes a tool for streamlining how your business works."
               </p>
             </blockquote>
 
             <p className="text-muted-foreground mb-6">
               With over a decade advising executive and senior leadership on
-              risk, I've delivered transformative security outcomes for organizations ranging from 
-              UK government departments to Fortune 500 multinationals. From leading proactive responses 
+              risk, I've delivered transformative security outcomes for organisations ranging from 
+              parish councils to Fortune 500 multinationals. From leading proactive responses 
               to critical threats (Log4J) to driving ISO27001 accreditations and managing vulnerability 
               programs across 60,000+ endpoints globally—I translate complex security challenges into 
               actionable business strategies.
@@ -62,8 +58,8 @@ export function About() {
 
             <p className="text-muted-foreground mb-6">
               Founded Cygnet Security in 2018 to deliver bespoke consulting that moves beyond
-              compliance checkboxes. My work spans vulnerability management, threat modeling, security 
-              transformation, and strategic advisory—always connecting technical security to measurable 
+              aesthetics. My work spans vulnerability management, threat modelling, security 
+              transformation, and strategic advisory—I connect technical security to measurable 
               business outcomes.
             </p>
 
