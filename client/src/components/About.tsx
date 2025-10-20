@@ -51,7 +51,7 @@ export function About() {
               With over a decade advising executive and senior leadership on
               risk, I've delivered transformative security outcomes for organisations ranging from 
               parish councils to Fortune 500 multinationals. From leading proactive responses 
-              to critical threats (Log4J) to driving ISO27001 accreditations and managing vulnerability 
+              to critical threats to driving ISO27001 accreditations and managing vulnerability 
               programs across 60,000+ endpoints globally—I translate complex security challenges into 
               actionable business strategies.
             </p>
