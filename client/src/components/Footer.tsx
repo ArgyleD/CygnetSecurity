@@ -86,7 +86,7 @@ export function Footer() {
                   contact@cygnetsecurity.co.uk
                 </a>
               </li>
-              <li data-testid="text-contact-location">London, UK</li>
+              <li data-testid="text-contact-location">Warwickshire, UK</li>
             </ul>
           </div>
         </div>
