@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
-import logoImage from "@assets/20250909_2149_Swan Security Silhouette_remix_01k4qf4f93f81sbgc70ssh6f61 copy_1760935041316.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP_1760935178589.png";
 
 export default function NotFound() {
   return (

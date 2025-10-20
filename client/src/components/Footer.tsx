@@ -1,4 +1,4 @@
-import logoImage from "@assets/20250909_2149_Swan Security Silhouette_remix_01k4qf4f93f81sbgc70ssh6f61 copy_1760935041316.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP_1760935178589.png";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
