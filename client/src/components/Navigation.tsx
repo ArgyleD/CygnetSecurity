@@ -35,9 +35,14 @@ export function Navigation() {
     setMobileMenuOpen(false);
     
     if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      // If we're not on the home page, navigate to home first
+      if (location !== "/") {
+        window.location.href = "/" + href;
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };
@@ -51,21 +56,22 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <button
-            onClick={() => handleNavClick("#home")}
-            className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
-            data-testid="link-home"
-          >
-            <img 
-              src={logoImage} 
-              alt="Cygnet Security" 
-              className="h-8 w-8"
-              style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
-            />
-            <span className="font-heading font-semibold text-xl">
-              Cygnet Security
-            </span>
-          </button>
+          <Link href="/">
+            <button
+              className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
+              data-testid="link-home"
+            >
+              <img 
+                src={logoImage} 
+                alt="Cygnet Security" 
+                className="h-8 w-8"
+                style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
+              />
+              <span className="font-heading font-semibold text-xl">
+                Cygnet Security
+              </span>
+            </button>
+          </Link>
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
