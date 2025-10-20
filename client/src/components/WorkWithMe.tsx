@@ -80,7 +80,7 @@ export function WorkWithMe() {
             data-testid="text-work-intro"
           >
             Outcome-driven engagements tailored to your unique security
-            challenges. I address root causes behind vulnerabilities, using
+            challenges. Addressing root causes behind vulnerabilities, using
             proactive observations to enhance risk management, drive
             transformation, and reduce risk while protecting revenue.
           </p>

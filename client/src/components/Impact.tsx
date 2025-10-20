@@ -79,8 +79,7 @@ export function Impact() {
             data-testid="text-impact-intro"
           >
             Real results across critical security challenges—from rapid threat
-            response to enterprise-wide transformation programs. Here's what I've
-            delivered for clients globally.
+            response to enterprise-wide transformation programs. Delivered for clients globally.
           </p>
         </div>
 
