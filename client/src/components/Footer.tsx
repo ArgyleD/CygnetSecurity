@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import logoImage from "@assets/20250909_2149_Swan Security Silhouette_remix_01k4qf4f93f81sbgc70ssh6f61 copy_1760935041316.png";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -30,7 +30,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Shield className="h-6 w-6 text-primary" />
+              <img src={logoImage} alt="Cygnet Security" className="h-7 w-7" />
               <span className="font-heading font-semibold text-lg">
                 Cygnet Security
               </span>

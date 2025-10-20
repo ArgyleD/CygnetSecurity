@@ -1,13 +1,14 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Shield, Home } from "lucide-react";
+import { Home } from "lucide-react";
+import logoImage from "@assets/20250909_2149_Swan Security Silhouette_remix_01k4qf4f93f81sbgc70ssh6f61 copy_1760935041316.png";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="text-center">
         <div className="inline-flex p-4 bg-primary/10 rounded-full mb-6">
-          <Shield className="h-16 w-16 text-primary" />
+          <img src={logoImage} alt="Cygnet Security" className="h-16 w-16" />
         </div>
         <h1
           className="font-heading text-6xl font-bold mb-4"

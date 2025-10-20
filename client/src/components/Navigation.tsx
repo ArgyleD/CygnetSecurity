@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { Shield, Linkedin, Menu, X } from "lucide-react";
+import { Linkedin, Menu, X } from "lucide-react";
+import logoImage from "@assets/20250909_2149_Swan Security Silhouette_remix_01k4qf4f93f81sbgc70ssh6f61 copy_1760935041316.png";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
 
@@ -55,7 +56,7 @@ export function Navigation() {
             className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
             data-testid="link-home"
           >
-            <Shield className="h-7 w-7 text-primary" />
+            <img src={logoImage} alt="Cygnet Security" className="h-8 w-8" />
             <span className="font-heading font-semibold text-xl">
               Cygnet Security
             </span>

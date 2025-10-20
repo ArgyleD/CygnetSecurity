@@ -20,7 +20,7 @@ const impactMetrics = [
   {
     id: 2,
     icon: Shield,
-    metric: "Log4J",
+    metric: "0-day",
     label: "Crisis Response Leadership",
     description:
       "Rapid deployment of enterprise-wide vulnerability management during critical zero-day threat",
