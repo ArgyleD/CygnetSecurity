@@ -11,7 +11,7 @@ const caseStudies = [
     problem:
       "Critical vulnerability crisis (Log4J) threatening hundreds of locations. Fragmented vulnerability visibility across departments with no centralized management.",
     approach:
-      "Led rapid response deploying Tenable.SC enterprise-wide. Implemented federated VM model balancing central oversight with departmental autonomy. Conducted threat modeling for sensitive systems and identified architectural risks.",
+      "Led rapid response identifying affected applications, assessing attack vectors, and coordinating remediation. Implemented a federated response model balancing central oversight with departmental autonomy.",
     outcome:
       "Secured executive funding for systemic remediation. Established scalable vulnerability governance model. Transformed reactive firefighting into proactive risk management across entire department.",
   },
