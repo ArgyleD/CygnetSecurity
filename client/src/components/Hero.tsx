@@ -39,8 +39,8 @@ export function Hero() {
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed"
           data-testid="text-hero-subtitle"
         >
-          A technical cybersecurity leader with over a decade advising executive
-          and senior leadership on risk. I blend business acumen with deep security
+          Technical security consulting with over a decade advising executive
+          and senior leadership on risk. We blend business acumen with deep security
           expertise to design and operate assurance processes that connect risk to
           business outcomes.
         </p>
