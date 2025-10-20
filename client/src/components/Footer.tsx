@@ -1,4 +1,4 @@
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -33,7 +33,7 @@ export function Footer() {
               <img 
                 src={logoImage} 
                 alt="Cygnet Security" 
-                className="h-7 w-7"
+                className="h-9 w-9"
                 style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />
               <span className="font-heading font-semibold text-lg">

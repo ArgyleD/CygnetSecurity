@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Linkedin, Menu, X } from "lucide-react";
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
 
@@ -64,7 +64,7 @@ export function Navigation() {
               <img 
                 src={logoImage} 
                 alt="Cygnet Security" 
-                className="h-8 w-8"
+                className="h-10 w-10"
                 style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />
               <span className="font-heading font-semibold text-xl">

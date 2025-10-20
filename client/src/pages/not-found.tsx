@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
 export default function NotFound() {
   return (
@@ -11,7 +11,7 @@ export default function NotFound() {
           <img 
             src={logoImage} 
             alt="Cygnet Security" 
-            className="h-16 w-16"
+            className="h-20 w-20"
             style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
           />
         </div>
