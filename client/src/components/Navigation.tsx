@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { Linkedin, Menu, X } from "lucide-react";
-import logoImage from "@assets/2025-Logo-Cropped-BP_1760935178589.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP - Copy.png";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
 

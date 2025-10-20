@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
-import logoImage from "@assets/2025-Logo-Cropped-BP_1760935178589.png";
+import logoImage from "@assets/2025-Logo-Cropped-BP - Copy.png";
 
 export default function NotFound() {
   return (
