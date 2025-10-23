@@ -64,8 +64,8 @@ export function Navigation() {
               <img 
                 src={logoImage} 
                 alt="Cygnet Security" 
-                className="h-10 w-10"
-                style={{ filter: 'brightness(0) saturate(100%) invert(53%) sepia(24%) saturate(719%) hue-rotate(118deg) brightness(94%) contrast(88%)' }}
+                className="h-[46px] w-[46px]"
+                style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />
               <span className="font-heading font-semibold text-xl">
                 Cygnet Security
