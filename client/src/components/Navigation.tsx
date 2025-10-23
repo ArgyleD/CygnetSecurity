@@ -12,7 +12,7 @@ const navItems = [
   { label: "Work with me", href: "#work" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Blog", href: "/blog", isRoute: true },
+  // { label: "Blog", href: "/blog", isRoute: true }, // Hidden for first release - restore for v2
   { label: "Contact", href: "#contact" },
 ];
 
