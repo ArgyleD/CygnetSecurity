@@ -52,7 +52,7 @@ export function About() {
               risk, I've delivered transformative security outcomes for organisations ranging from 
               parish councils to Fortune 500 multinationals. From leading proactive responses 
               to critical threats to driving ISO27001 accreditations and managing vulnerability 
-              programs across 60,000+ endpoints globally—I translate complex security challenges into 
+              programs globally—I translate complex security challenges into 
               actionable business strategies.
             </p>
 
