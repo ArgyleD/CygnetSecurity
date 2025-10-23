@@ -53,7 +53,7 @@ const services = [
   {
     id: 4,
     title: "Technical Risk Management Accelerator",
-    duration: "6-8 weeks",
+    duration: "6-12 weeks",
     price: "Contact for pricing",
     description:
       "Connect technical security metrics to business outcomes with executive-ready risk reporting framework aligned to CIS Controls and ISO27001.",
