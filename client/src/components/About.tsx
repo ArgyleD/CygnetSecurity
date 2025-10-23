@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Target, LineChart, Wrench } from "lucide-react";
-import headshotImage from "@assets/generated_images/Professional_consultant_headshot_placeholder_dfcbbaa6.png";
+import headshotImage from "@assets/mugshot.jpg";
 
 const pillars = [
   {
@@ -96,6 +96,9 @@ export function About() {
                 className="rounded-md w-full max-w-md mx-auto shadow-xl"
                 data-testid="img-headshot"
               />
+              <p className="text-xs text-muted-foreground italic text-center mt-2">
+                We cant find a better photo
+              </p>
             </div>
           </div>
         </div>
