@@ -89,7 +89,7 @@ export function Services() {
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-services"
           >
-            Fixed-Cost Packages
+            Pre-defined Work Packages
           </h2>
           <p
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
