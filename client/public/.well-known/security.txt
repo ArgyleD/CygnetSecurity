@@ -1,0 +1,12 @@
+Contact: mailto:ryan@cygnetsecurity.co.uk
+Expires: 2030-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://cygnetsecurity.co.uk/.well-known/security.txt
+
+# Cygnet Security - Vulnerability Disclosure
+# 
+# If you have discovered a security vulnerability in our systems,
+# please report it responsibly to the contact above.
+# 
+# We appreciate the security research community and take all 
+# reports seriously.
