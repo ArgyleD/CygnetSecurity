@@ -32,7 +32,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <img 
                 src={logoImage} 
-                alt="Cygnet Security" 
+                alt="Cygnet Security Logo - Cybersecurity Consulting" 
                 className="h-9 w-9"
                 style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />

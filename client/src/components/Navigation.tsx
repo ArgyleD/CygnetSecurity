@@ -63,7 +63,7 @@ export function Navigation() {
             >
               <img 
                 src={logoImage} 
-                alt="Cygnet Security" 
+                alt="Cygnet Security Logo - Cybersecurity Consulting" 
                 className="h-[46px] w-[46px]"
                 style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />

@@ -92,7 +92,7 @@ export function About() {
             <div className="relative">
               <img
                 src={headshotImage}
-                alt="Ryan Ward-McConville"
+                alt="Ryan Ward-McConville, Founder of Cygnet Security - Cybersecurity Consultant"
                 className="rounded-md w-full max-w-md mx-auto shadow-xl"
                 data-testid="img-headshot"
               />

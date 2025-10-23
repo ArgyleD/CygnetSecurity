@@ -10,7 +10,7 @@ export default function NotFound() {
         <div className="inline-flex p-4 bg-primary/10 rounded-full mb-6">
           <img 
             src={logoImage} 
-            alt="Cygnet Security" 
+            alt="Cygnet Security Logo - Cybersecurity Consulting" 
             className="h-20 w-20"
             style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
           />
