@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { ServicesDropdown } from "./ServicesDropdown";
 import { Linkedin, Menu, X } from "lucide-react";
 import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
@@ -10,7 +11,6 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Work with me", href: "#work" },
-  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   // { label: "Blog", href: "/blog", isRoute: true }, // Hidden for first release - restore for v2
   { label: "Contact", href: "#contact" },
@@ -75,28 +75,17 @@ export function Navigation() {
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              item.isRoute ? (
-                <Link key={item.label} href={item.href}>
-                  <Button
-                    variant="ghost"
-                    className="hover-elevate active-elevate-2"
-                    data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {item.label}
-                  </Button>
-                </Link>
-              ) : (
-                <Button
-                  key={item.label}
-                  variant="ghost"
-                  onClick={() => handleNavClick(item.href)}
-                  className="hover-elevate active-elevate-2"
-                  data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  {item.label}
-                </Button>
-              )
+              <Button
+                key={item.label}
+                variant="ghost"
+                onClick={() => handleNavClick(item.href)}
+                className="hover-elevate active-elevate-2"
+                data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+              >
+                {item.label}
+              </Button>
             ))}
+            <ServicesDropdown />
           </div>
 
           <div className="flex items-center gap-2">
@@ -131,29 +120,17 @@ export function Navigation() {
           <div className="md:hidden border-t border-card-border py-4">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => (
-                item.isRoute ? (
-                  <Link key={item.label} href={item.href}>
-                    <Button
-                      variant="ghost"
-                      className="w-full justify-start hover-elevate active-elevate-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                      data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {item.label}
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button
-                    key={item.label}
-                    variant="ghost"
-                    className="w-full justify-start hover-elevate active-elevate-2"
-                    onClick={() => handleNavClick(item.href)}
-                    data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                  >
-                    {item.label}
-                  </Button>
-                )
+                <Button
+                  key={item.label}
+                  variant="ghost"
+                  className="w-full justify-start hover-elevate active-elevate-2"
+                  onClick={() => handleNavClick(item.href)}
+                  data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {item.label}
+                </Button>
               ))}
+              <ServicesDropdown mobile onNavigate={() => setMobileMenuOpen(false)} />
             </div>
           </div>
         )}

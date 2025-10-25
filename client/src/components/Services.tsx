@@ -69,12 +69,8 @@ const services = [
 ];
 
 export function Services() {
-  const handleRequestProposal = (serviceName: string) => {
-    console.log(`Request proposal for: ${serviceName}`);
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleViewAllServices = () => {
+    window.location.href = "/services";
   };
 
   return (
@@ -89,70 +85,64 @@ export function Services() {
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-services"
           >
-            Pre-defined Work Packages
+            Security Services
           </h2>
           <p
-            className="text-lg text-muted-foreground max-w-3xl mx-auto"
+            className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8"
             data-testid="text-services-intro"
           >
-            Transparent, predictable engagements with clear scope, timelines,
-            and deliverables. Get started quickly with proven methodologies.
+            From bespoke consulting to structured work packages, choose the approach that best fits your security challenges. All engagements deliver measurable outcomes aligned to business objectives.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => (
-            <Card
-              key={service.id}
-              className="p-6 flex flex-col overflow-visible"
-              data-testid={`card-service-${service.id}`}
-            >
-              <div className="flex-1">
-                <div className="mb-4">
-                  <Badge
-                    variant="outline"
-                    className="mb-3"
-                    data-testid={`badge-duration-${service.id}`}
-                  >
-                    <Clock className="h-3 w-3 mr-1" />
-                    {service.duration}
-                  </Badge>
-                  <h3 className="font-heading text-xl font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-primary font-medium mb-4">
-                    {service.price}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    {service.description}
-                  </p>
-                </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-12">
+          <Card className="p-6 overflow-visible text-center" data-testid="card-service-overview-1">
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              Bespoke Consulting
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Tailored engagements for unique security challenges with proven outcomes across government, enterprise, and critical infrastructure.
+            </p>
+          </Card>
 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-sm mb-3">Deliverables</h4>
-                  <ul className="space-y-2">
-                    {service.deliverables.map((item, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                      >
-                        <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+          <Card className="p-6 overflow-visible text-center" data-testid="card-service-overview-2">
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              Pre-defined Work Packages
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Transparent, predictable engagements with clear scope, timelines, and deliverables for rapid exposure review, vulnerability management, and more.
+            </p>
+          </Card>
 
-              <Button
-                className="w-full hover-elevate active-elevate-2"
-                onClick={() => handleRequestProposal(service.title)}
-                data-testid={`button-request-proposal-${service.id}`}
-              >
-                Request proposal
-              </Button>
-            </Card>
-          ))}
+          <Card className="p-6 overflow-visible text-center" data-testid="card-service-overview-3">
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              Security Metrics Toolkit
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Professional PowerBI dashboard implementation aligned to NIST SP 800-55 for visualizing and tracking security metrics programs.
+            </p>
+          </Card>
+
+          <Card className="p-6 overflow-visible text-center" data-testid="card-service-overview-4">
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              Cyber Essentials
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              Expert implementation services to prepare your organisation for UK Government-backed Cyber Essentials accreditation — pass first time.
+            </p>
+          </Card>
+        </div>
+
+        <div className="text-center">
+          <Button
+            size="lg"
+            onClick={handleViewAllServices}
+            className="hover-elevate active-elevate-2"
+            data-testid="button-view-all-services"
+          >
+            View all services
+            <CheckCircle2 className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>
