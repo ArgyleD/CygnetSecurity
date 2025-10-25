@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck } from "lucide-react";
+import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck, Award } from "lucide-react";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
