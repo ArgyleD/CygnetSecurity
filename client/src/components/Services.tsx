@@ -131,6 +131,15 @@ export function Services() {
               Expert implementation services to prepare your organisation for UK Government-backed Cyber Essentials accreditation — pass first time.
             </p>
           </Card>
+
+          <Card className="p-6 overflow-visible text-center" data-testid="card-service-overview-5">
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              Pen Test Support
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              End-to-end penetration testing support covering assessment scoping, procurement, finding triage, and converting technical findings into actionable business changes.
+            </p>
+          </Card>
         </div>
 
         <div className="text-center">
