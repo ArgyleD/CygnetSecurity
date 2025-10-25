@@ -13,7 +13,6 @@ const navItems = [
   { label: "Work with me", href: "#work" },
   { label: "About", href: "#about" },
   // { label: "Blog", href: "/blog", isRoute: true }, // Hidden for first release - restore for v2
-  { label: "Contact", href: "#contact" },
 ];
 
 export function Navigation() {
@@ -73,7 +72,7 @@ export function Navigation() {
             </button>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-1 flex-1">
             {navItems.map((item) => (
               <Button
                 key={item.label}
@@ -89,6 +88,14 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              onClick={() => handleNavClick("#contact")}
+              className="hidden md:flex hover-elevate active-elevate-2"
+              data-testid="link-contact"
+            >
+              Contact
+            </Button>
             <Button
               variant="ghost"
               size="icon"
@@ -131,6 +138,14 @@ export function Navigation() {
                 </Button>
               ))}
               <ServicesDropdown mobile onNavigate={() => setMobileMenuOpen(false)} />
+              <Button
+                variant="ghost"
+                className="w-full justify-start hover-elevate active-elevate-2"
+                onClick={() => handleNavClick("#contact")}
+                data-testid="link-mobile-contact"
+              >
+                Contact
+              </Button>
             </div>
           </div>
         )}

@@ -191,12 +191,12 @@ export default function ServicesPage() {
                 >
                   <div className="mb-4">
                     <div className="flex items-center gap-3 mb-4">
-                      <Badge variant="secondary" data-testid={`badge-case-study-${study.id}`}>
-                        Case Study {study.id}
-                      </Badge>
                       <div className="inline-flex p-3 bg-primary/10 rounded-md">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
+                      <Badge variant="secondary" data-testid={`badge-case-study-${study.id}`}>
+                        Case Study {study.id}
+                      </Badge>
                     </div>
                     <h3 className="font-heading text-xl font-semibold mb-2">
                       {study.title}
@@ -245,83 +245,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Pre-defined Work Packages */}
-      <section
-        id="work-packages"
-        className="py-20 md:py-32 bg-card"
-        data-testid="section-work-packages"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Pre-defined Work Packages
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Transparent, predictable engagements with clear scope, timelines, and deliverables. Get started quickly with proven methodologies.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-            {predefinedServices.map((service) => (
-              <Card
-                key={service.id}
-                className="p-6 flex flex-col overflow-visible"
-                data-testid={`card-service-${service.id}`}
-              >
-                <div className="flex-1">
-                  <div className="mb-4">
-                    <Badge
-                      variant="outline"
-                      className="mb-3"
-                      data-testid={`badge-duration-${service.id}`}
-                    >
-                      <Clock className="h-3 w-3 mr-1" />
-                      {service.duration}
-                    </Badge>
-                    <h3 className="font-heading text-xl font-semibold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium mb-4">
-                      {service.price}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-sm mb-3">Deliverables</h4>
-                    <ul className="space-y-2">
-                      {service.deliverables.map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-sm text-muted-foreground"
-                        >
-                          <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <Button
-                  className="w-full hover-elevate active-elevate-2"
-                  onClick={handleContactClick}
-                  data-testid={`button-request-proposal-${service.id}`}
-                >
-                  Request proposal
-                </Button>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Security Metrics Toolkit */}
       <section
         id="security-metrics-toolkit"
-        className="py-20 md:py-32 bg-background"
+        className="py-20 md:py-32 bg-card"
         data-testid="section-metrics-toolkit"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -406,6 +333,79 @@ export default function ServicesPage() {
               Discuss your requirements
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Pre-defined Work Packages */}
+      <section
+        id="work-packages"
+        className="py-20 md:py-32 bg-background"
+        data-testid="section-work-packages"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+              Pre-defined Work Packages
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Transparent, predictable engagements with clear scope, timelines, and deliverables. Get started quickly with proven methodologies.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+            {predefinedServices.map((service) => (
+              <Card
+                key={service.id}
+                className="p-6 flex flex-col overflow-visible"
+                data-testid={`card-service-${service.id}`}
+              >
+                <div className="flex-1">
+                  <div className="mb-4">
+                    <Badge
+                      variant="outline"
+                      className="mb-3"
+                      data-testid={`badge-duration-${service.id}`}
+                    >
+                      <Clock className="h-3 w-3 mr-1" />
+                      {service.duration}
+                    </Badge>
+                    <h3 className="font-heading text-xl font-semibold mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-primary font-medium mb-4">
+                      {service.price}
+                    </p>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-sm mb-3">Deliverables</h4>
+                    <ul className="space-y-2">
+                      {service.deliverables.map((item, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <Button
+                  className="w-full hover-elevate active-elevate-2"
+                  onClick={handleContactClick}
+                  data-testid={`button-request-proposal-${service.id}`}
+                >
+                  Request proposal
+                </Button>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
