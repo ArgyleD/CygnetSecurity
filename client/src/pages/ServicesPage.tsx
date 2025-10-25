@@ -190,8 +190,13 @@ export default function ServicesPage() {
                   data-testid={`card-case-study-${study.id}`}
                 >
                   <div className="mb-4">
-                    <div className="inline-flex p-3 bg-primary/10 rounded-md mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
+                    <div className="flex items-center gap-3 mb-4">
+                      <Badge variant="secondary" data-testid={`badge-case-study-${study.id}`}>
+                        Case Study {study.id}
+                      </Badge>
+                      <div className="inline-flex p-3 bg-primary/10 rounded-md">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
                     </div>
                     <h3 className="font-heading text-xl font-semibold mb-2">
                       {study.title}
