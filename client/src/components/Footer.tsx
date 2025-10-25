@@ -86,7 +86,13 @@ export function Footer() {
                   contact@cygnetsecurity.co.uk
                 </a>
               </li>
-              <li data-testid="text-contact-location">Warwickshire, UK</li>
+              <li data-testid="text-contact-location">
+                Cygnet Security Ltd
+                <br />
+                Aston Rd, Nuneaton, Warwickshire, CV11 5EJ
+                <br />
+                Company Registration: 11168915
+              </li>
             </ul>
           </div>
         </div>
