@@ -81,7 +81,7 @@ export function Sectors() {
   return (
     <section
       id="sectors"
-      className="py-20 md:py-32 bg-background"
+      className="py-20 md:py-32 bg-card"
       data-testid="section-sectors"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
