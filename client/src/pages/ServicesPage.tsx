@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck } from "lucide-react";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 const predefinedServices = [
   {
@@ -142,9 +144,11 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-card">
+    <div className="min-h-screen">
+      <Navigation />
+      <main className="bg-background">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32 bg-gradient-to-br from-background via-background to-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1
@@ -581,6 +585,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 }

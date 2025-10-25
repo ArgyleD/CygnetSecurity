@@ -38,7 +38,7 @@ export function About() {
               className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               data-testid="heading-about"
             >
-              About Ryan Ward-McConville
+              About Ryan
             </h2>
 
             <blockquote className="border-l-4 border-primary pl-6 mb-8">

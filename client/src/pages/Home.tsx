@@ -88,12 +88,12 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <About />
         <Impact />
         <WorkWithMe />
         <Sectors />
         <Services />
         <Standards />
-        <About />
         <Contact />
       </main>
       <Footer />
