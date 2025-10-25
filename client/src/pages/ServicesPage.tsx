@@ -421,8 +421,11 @@ export default function ServicesPage() {
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Cyber Essentials Implementation
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional consulting services to prepare your organisation for Cyber Essentials accreditation — pass first time with confidence.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+              In the wake of high-profile attacks on M&S, Co-op, and Jaguar Land Rover, cyber security is no longer just an IT issue—it's a boardroom priority. 
+            </p>
+            <p className="text-lg font-medium text-primary max-w-3xl mx-auto">
+              Get Cyber Essentials certified and don't be an easy target. It's time to act.
             </p>
           </div>
 
@@ -431,32 +434,39 @@ export default function ServicesPage() {
               <h3 className="font-heading text-2xl font-semibold mb-6">
                 What is Cyber Essentials?
               </h3>
+              <p className="text-muted-foreground mb-4">
+                Cyber Essentials is a UK Government-backed certification scheme with a proven 10-year track record (2014-2024). Data from the NCSC's independent evaluation shows organisations with Cyber Essentials are <strong className="text-foreground">92% less likely to make insurance claims</strong>.
+              </p>
               <p className="text-muted-foreground mb-6">
-                Cyber Essentials is a UK Government-backed certification scheme that protects organisations against the most common cyber attacks. It demonstrates your commitment to cyber security and is often required for government contracts and supply chain relationships.
+                These 5 foundational controls protect against the basic weaknesses that even sophisticated attackers exploit. The scheme demonstrates your commitment to cyber security and is often required for government contracts and supply chain relationships.
               </p>
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <h4 className="font-semibold mb-3">Why Get Certified?</h4>
+                  <h4 className="font-semibold mb-3">Proven Business Benefits</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">92% less likely</strong> to make insurance claims (NCSC evaluation)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">69% increased</strong> market competitiveness (10-year data)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">48% faster</strong> supplier due diligence when certified</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span><strong className="text-foreground">86%</strong> report stronger senior management buy-in</span>
+                    </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                       <span>Required for UK Government contracts</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span>Demonstrates commitment to suppliers and customers</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span>Protection against 80% of cyber attacks</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                       <span>Free cyber liability insurance (up to £25,000)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span>Competitive advantage in tender processes</span>
                     </li>
                   </ul>
                 </div>
@@ -477,6 +487,43 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="mb-12">
+            <Card className="p-8 bg-primary/5 border-primary/20 overflow-visible">
+              <div className="text-center">
+                <div className="inline-flex items-center gap-2 mb-4">
+                  <Award className="h-6 w-6 text-primary" />
+                  <h3 className="font-heading text-2xl font-semibold">
+                    10 Years Proven
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Cyber Essentials has protected UK organisations since 2014. The NCSC's independent 10-year evaluation confirms what we've seen firsthand: <strong className="text-foreground">even sophisticated attackers exploit basic weaknesses</strong> — and these 5 controls work.
+                </p>
+                <div className="grid gap-6 md:grid-cols-4 mt-8">
+                  <div className="text-center">
+                    <div className="font-heading text-3xl font-bold text-primary mb-2">92%</div>
+                    <p className="text-sm text-muted-foreground">Fewer insurance claims</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-heading text-3xl font-bold text-primary mb-2">69%</div>
+                    <p className="text-sm text-muted-foreground">Market competitiveness boost</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-heading text-3xl font-bold text-primary mb-2">86%</div>
+                    <p className="text-sm text-muted-foreground">Improved board understanding</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="font-heading text-3xl font-bold text-primary mb-2">48%</div>
+                    <p className="text-sm text-muted-foreground">Faster supplier onboarding</p>
+                  </div>
+                </div>
+                <p className="text-xs text-muted-foreground mt-6 italic">
+                  Source: NCSC Independent Impact Evaluation (2014-2024)
+                </p>
               </div>
             </Card>
           </div>
