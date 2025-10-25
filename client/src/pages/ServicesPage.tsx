@@ -264,6 +264,18 @@ export default function ServicesPage() {
             </p>
           </div>
 
+          <div className="bg-background rounded-md p-8 mb-12">
+            <h3 className="font-heading text-xl font-semibold mb-4">
+              Built on SecureMetrics.io Templates
+            </h3>
+            <p className="text-muted-foreground mb-4">
+              This service provides professional customisation and deployment of the Security Metrics Toolkit by SecureMetrics.io — a proven PowerBI solution trusted by security professionals worldwide.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Cygnet Security is an independent consultant offering implementation services. The Security Metrics Toolkit is maintained by SecureMetrics.io.
+            </p>
+          </div>
+
           <div className="grid gap-8 lg:grid-cols-2 mb-12">
             <Card className="p-8 overflow-visible">
               <h3 className="font-heading text-2xl font-semibold mb-6">
@@ -272,12 +284,10 @@ export default function ServicesPage() {
               <ul className="space-y-4">
                 {[
                   "Customised PowerBI dashboard implementation",
-                  "Excel data source configuration and automation guidance",
-                  "Metrics Matrix™ one-page program overview",
+                  "Excel data source configuration and effort to automate metric collection through API calls your existing tools have",
                   "Integration with Teams, OneDrive, or SharePoint",
                   "Training on metric tracking and target management",
                   "Alignment to NIST 800-55 metric types",
-                  "Documentation and ongoing support",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -300,7 +310,6 @@ export default function ServicesPage() {
                   "Metric Cards showing percent of target achieved",
                   "Target Deviation Cards for variance analysis",
                   "Maintain up-to-date inventory of all security metrics",
-                  "Quick 10-minute setup with professional implementation support",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -309,18 +318,6 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </Card>
-          </div>
-
-          <div className="bg-card rounded-md p-8 mb-8">
-            <h3 className="font-heading text-xl font-semibold mb-4">
-              Built on SecureMetrics.io Templates
-            </h3>
-            <p className="text-muted-foreground mb-4">
-              This service provides professional customisation and deployment of the Security Metrics Toolkit by SecureMetrics.io — a proven PowerBI solution trusted by security professionals worldwide.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Cygnet Security is an independent consultant offering implementation services. The Security Metrics Toolkit is maintained by SecureMetrics.io.
-            </p>
           </div>
 
           <div className="text-center">

@@ -3,10 +3,13 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { ServicesDropdown } from "./ServicesDropdown";
-import { Linkedin, Menu, X } from "lucide-react";
+import { Linkedin, Menu, X, Mail } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
+const WHATSAPP_URL = "https://wa.me/447917666267";
+const EMAIL_URL = "mailto:ryan@cygnetsecurity.co.uk";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -90,11 +93,27 @@ export function Navigation() {
           <div className="flex items-center gap-2">
             <Button
               variant="ghost"
-              onClick={() => handleNavClick("#contact")}
+              size="icon"
+              asChild
               className="hidden md:flex hover-elevate active-elevate-2"
-              data-testid="link-contact"
+              data-testid="button-whatsapp"
             >
-              Contact
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <SiWhatsapp className="h-5 w-5" />
+                <span className="sr-only">WhatsApp</span>
+              </a>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="hidden md:flex hover-elevate active-elevate-2"
+              data-testid="button-email"
+            >
+              <a href={EMAIL_URL}>
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </a>
             </Button>
             <Button
               variant="ghost"
@@ -141,10 +160,24 @@ export function Navigation() {
               <Button
                 variant="ghost"
                 className="w-full justify-start hover-elevate active-elevate-2"
-                onClick={() => handleNavClick("#contact")}
-                data-testid="link-mobile-contact"
+                asChild
+                data-testid="button-mobile-whatsapp"
               >
-                Contact
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <SiWhatsapp className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full justify-start hover-elevate active-elevate-2"
+                asChild
+                data-testid="button-mobile-email"
+              >
+                <a href={EMAIL_URL}>
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email
+                </a>
               </Button>
             </div>
           </div>
