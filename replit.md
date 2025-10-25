@@ -15,7 +15,7 @@ Preferred communication style: Simple, everyday language.
 **Framework & Build System**
 - React 18 with TypeScript for type-safe component development
 - Vite as the build tool and development server for fast HMR and optimized production builds
-- Wouter for lightweight client-side routing (home page, blog listing, blog posts, 404 page)
+- Wouter for lightweight client-side routing (home page, services page, blog listing, blog posts, 404 page)
 
 **UI Component System**
 - Radix UI primitives for accessible, unstyled components (dialogs, dropdowns, navigation, etc.)
@@ -35,10 +35,12 @@ Preferred communication style: Simple, everyday language.
 - Consistent spacing scale using Tailwind units (4, 8, 12, 16, 20, 24, 32)
 
 **Key Features**
-- Single-page application with smooth scroll navigation to sections
+- Multi-page application with smooth scroll navigation to sections within pages
+- Dedicated Services page (/services) with 4 comprehensive service offerings
+- Services navigation dropdown with hash-based section links
 - Dark/light theme toggle with system preference detection
 - Fully responsive design optimized for desktop, tablet, and mobile
-- Blog system with markdown-like content rendering
+- Blog system with markdown-like content rendering (hidden in first release)
 - Static asset management for images (headshots, backgrounds, blog headers)
 
 ### Backend Architecture
@@ -114,8 +116,62 @@ Preferred communication style: Simple, everyday language.
 - Generated images for hero backgrounds, blog headers, and professional photos
 - Experience data in JSON format for case studies
 
+## Service Offerings
+
+The website showcases four distinct service categories:
+
+1. **Bespoke Consulting** (/services#bespoke-consulting)
+   - Tailored engagements for unique security challenges
+   - 4 detailed case studies: UK Government Department, Marketing Data & Analytics, Global Engineering Consultancy, Energy Sector
+   - Proven outcomes across government, enterprise, and critical infrastructure
+
+2. **Pre-defined Work Packages** (/services#work-packages)
+   - Rapid Exposure Review (2-3 weeks)
+   - Vulnerability Management Jumpstart (4 weeks)
+   - Pen Test Readiness & Remediation (4-6 weeks)
+   - Technical Risk Management Accelerator (6-12 weeks)
+   - Each package includes clear scope, timelines, deliverables, and pricing
+
+3. **Security Metrics Toolkit Implementation** (/services#security-metrics-toolkit)
+   - Professional PowerBI dashboard customization aligned to NIST SP 800-55
+   - Based on SecureMetrics.io templates
+   - Features: Metrics Matrix™, Excel automation, Teams/OneDrive integration
+   - Benefits: Track ANY security metric, target deviation analysis, action dots
+
+4. **Cyber Essentials Implementation** (/services#cyber-essentials)
+   - UK Government-backed certification preparation
+   - Two levels: Cyber Essentials and Cyber Essentials Plus
+   - Covers 5 technical controls: Firewalls, Secure Configuration, Security Updates, User Access Control, Malware Protection
+   - Services include gap analysis, readiness assessment, documentation, and certification support
+
+## Navigation Structure
+
+- **Homepage** (/): Hero, Impact metrics, Work with Me (brief), Services (overview), About, Contact
+- **Services Page** (/services): Comprehensive service offerings with hash-based navigation
+  - Services dropdown menu in navigation with 4 links to specific sections
+  - Mobile-responsive dropdown with collapsible submenu
+- **Blog** (hidden for first release): Restore by uncommenting in Navigation.tsx and removing from robots.txt
+
+## SEO & Metadata
+
+- Comprehensive structured data: Organization, LocalBusiness, Person, Service schemas
+- All 7 service offerings included in Service schema with URLs
+- Sitemap includes /services page with priority 0.9
+- Open Graph and Twitter Card meta tags
+- security.txt with contact email and 2030-01-01 expiry
+- Blog excluded from search indexing via robots.txt Disallow
+
+## Company Information
+
+- **Legal Name**: Cygnet Security Ltd
+- **Founded**: 2018
+- **Company Registration**: 11168915
+- **Address**: Aston Rd, Nuneaton, Warwickshire, CV11 5EJ
+- **Contact Email**: ryan@cygnetsecurity.co.uk
+- **Phone**: +44-7917-666267
+- **LinkedIn**: https://www.linkedin.com/in/rysward
+
 **Future Integration Points**
-- LinkedIn profile integration (configured URL: https://www.linkedin.com/in/rysward)
-- Contact email: contact@cygnetsecurity.co.uk
-- Blog content management (currently hardcoded, ready for CMS or headless integration)
+- Blog content management (currently hidden, ready for CMS or headless integration)
 - Analytics and tracking (prepared structure, not yet implemented)
+- Form submission backend for contact inquiries
