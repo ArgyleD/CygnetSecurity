@@ -30,7 +30,7 @@ export function Hero() {
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent"
           data-testid="heading-hero"
         >
-          Reduce risk. Protect revenue. Move fast, securely.
+          Reduce risk. Protect revenue. Move faster, securely.
         </h1>
 
         <p
@@ -38,9 +38,9 @@ export function Hero() {
           data-testid="text-hero-subtitle"
         >
           Technical security consulting with over a decade advising executive
-          and senior leadership on risk. We blend business acumen with deep security
-          expertise to design and operate assurance processes that connect risk to
-          business outcomes.
+          and senior leadership on risk. We blend business acumen with deep
+          security expertise to design and operate assurance processes that
+          connect risk to business outcomes.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
