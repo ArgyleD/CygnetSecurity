@@ -24,14 +24,11 @@ export function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/85" />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent"
           data-testid="heading-hero"
-        >
-          Cygnet Security: Reduce risk. Protect revenue. Move fast, securely.
-        </h1>
+        >Reduce risk. Protect revenue. Move fast, securely.</h1>
 
         <p
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed"
