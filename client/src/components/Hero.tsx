@@ -30,7 +30,7 @@ export function Hero() {
           className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground via-foreground to-primary bg-clip-text text-transparent"
           data-testid="heading-hero"
         >
-          Reduce risk. Protect revenue. Move faster, securely.
+          Cygnet Security: Reduce risk. Protect revenue. Move fast, securely.
         </h1>
 
         <p

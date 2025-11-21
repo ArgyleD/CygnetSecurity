@@ -78,7 +78,7 @@ export function Impact() {
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             data-testid="text-impact-intro"
           >
-            Real results across critical security challenges—from rapid threat
+            Real results across critical security challenges, from rapid threat
             response to enterprise-wide transformation programs. Delivered for clients globally.
           </p>
         </div>

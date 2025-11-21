@@ -128,7 +128,7 @@ export function Services() {
               Cyber Essentials
             </h3>
             <p className="text-sm text-muted-foreground">
-              Expert implementation services to prepare your organisation for UK Government-backed Cyber Essentials accreditation — pass first time.
+              Expert implementation services to prepare your organisation for UK Government-backed Cyber Essentials accreditation. Pass first time.
             </p>
           </Card>
 

@@ -269,7 +269,7 @@ export default function ServicesPage() {
               Built on SecureMetrics.io Templates
             </h3>
             <p className="text-muted-foreground mb-4">
-              This service provides professional customisation and deployment of the Security Metrics Toolkit by SecureMetrics.io — a proven PowerBI solution trusted by security professionals worldwide.
+              This service provides professional customisation and deployment of the Security Metrics Toolkit by SecureMetrics.io, a proven PowerBI solution trusted by security professionals worldwide.
             </p>
             <p className="text-sm text-muted-foreground">
               Cygnet Security is an independent consultant offering implementation services. The Security Metrics Toolkit is maintained by SecureMetrics.io.
@@ -422,7 +422,7 @@ export default function ServicesPage() {
               Cyber Essentials Implementation
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-              In the wake of high-profile attacks on M&S, Co-op, and Jaguar Land Rover, cyber security is no longer just an IT issue—it's a boardroom priority. 
+              In the wake of high-profile attacks on M&S, Co-op, and Jaguar Land Rover, cyber security is no longer just an IT issue. It's a boardroom priority. 
             </p>
             <p className="text-lg font-medium text-primary max-w-3xl mx-auto">
               Get Cyber Essentials certified and don't be an easy target. It's time to act.
@@ -501,7 +501,7 @@ export default function ServicesPage() {
                   </h3>
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  Cyber Essentials has protected UK organisations since 2014. The NCSC's independent 10-year evaluation confirms what we've seen firsthand: <strong className="text-foreground">even sophisticated attackers exploit basic weaknesses</strong> — and these 5 controls work.
+                  Cyber Essentials has protected UK organisations since 2014. The NCSC's independent 10-year evaluation confirms what we've seen firsthand: <strong className="text-foreground">even sophisticated attackers exploit basic weaknesses</strong>, and these 5 controls work.
                 </p>
                 <div className="grid gap-6 md:grid-cols-4 mt-8">
                   <div className="text-center">

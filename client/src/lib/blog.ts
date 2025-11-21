@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     content: `
 # Managing Exposure Like a Product
 
-In traditional security operations, exposure management often feels reactive—a never-ending game of whack-a-mole where new vulnerabilities appear faster than teams can address them. But what if we approached exposure management like product managers approach building software?
+In traditional security operations, exposure management often feels reactive: a never-ending game of whack-a-mole where new vulnerabilities appear faster than teams can address them. But what if we approached exposure management like product managers approach building software?
 
 ## The Product Mindset
 
@@ -238,7 +238,7 @@ Essential elements:
 
 ## Conclusion
 
-Effective risk communication isn't about dumbing down security—it's about translating technical reality into terms that enable informed business decisions. When you speak the language of business outcomes, you transform security from a cost center to a strategic enabler.
+Effective risk communication isn't about dumbing down security. It's about translating technical reality into terms that enable informed business decisions. When you speak the language of business outcomes, you transform security from a cost center to a strategic enabler.
 
 *Need help building executive-ready risk reporting? I specialize in translating technical security into business value.*
     `,

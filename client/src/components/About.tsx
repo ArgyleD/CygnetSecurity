@@ -52,14 +52,14 @@ export function About() {
               risk, I've delivered transformative security outcomes for organisations ranging from 
               parish councils to Fortune 500 multinationals. From leading proactive responses 
               to critical threats to driving ISO27001 accreditations and managing vulnerability 
-              programs globally—I translate complex security challenges into 
+              programs globally, I translate complex security challenges into 
               actionable business strategies.
             </p>
 
             <p className="text-muted-foreground mb-6">
               Founded Cygnet Security in 2018 to deliver bespoke consulting that moves beyond
               aesthetics. My work spans vulnerability management, threat modelling, security 
-              transformation, and strategic advisory—I connect technical security to measurable 
+              transformation, and strategic advisory. I connect technical security to measurable 
               business outcomes.
             </p>
 

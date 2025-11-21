@@ -5,7 +5,6 @@ const quickLinks = [
   { label: "Work with me", href: "#work" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -43,7 +42,7 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Bespoke cybersecurity consulting delivering outcome-driven
               security solutions. Reduce risk, protect revenue, and move
-              faster—securely.
+              fast, securely.
             </p>
           </div>
 

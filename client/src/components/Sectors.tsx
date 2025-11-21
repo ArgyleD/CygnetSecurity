@@ -96,7 +96,7 @@ export function Sectors() {
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             data-testid="text-sectors-intro"
           >
-            Trusted by organizations across critical sectors—from UK government
+            Trusted by organizations across critical sectors, from UK government
             departments to Fortune 500 multinationals. Deep expertise in
             regulated industries where security, compliance, and business
             continuity are non-negotiable.
