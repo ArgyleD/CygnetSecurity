@@ -43,11 +43,11 @@ function Contact() {
               <div>
                 <h3 className="font-semibold mb-2">Email</h3>
                 <a
-                  href="mailto:contact@cygnetsecurity.co.uk"
+                  href="mailto:ryan@cygnetsecurity.co.uk"
                   className="text-muted-foreground hover:text-primary transition-colors"
                   data-testid="link-contact-email"
                 >
-                  contact@cygnetsecurity.co.uk
+                  ryan[@]cygnetsecurity.co.uk
                 </a>
               </div>
             </div>

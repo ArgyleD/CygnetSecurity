@@ -79,10 +79,10 @@ export function Footer() {
               <li data-testid="text-contact-email">
                 Email:{" "}
                 <a
-                  href="mailto:contact@cygnetsecurity.co.uk"
+                  href="mailto:ryan@cygnetsecurity.co.uk"
                   className="hover:text-primary transition-colors"
                 >
-                  contact@cygnetsecurity.co.uk
+                  ryan[@]cygnetsecurity.co.uk
                 </a>
               </li>
               <li data-testid="text-contact-location">
