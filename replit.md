@@ -171,6 +171,36 @@ The website showcases four distinct service categories:
 - **Phone**: +44-7917-666267
 - **LinkedIn**: https://www.linkedin.com/in/rysward
 
+## GitHub Pages Deployment
+
+### How It Works
+The site is configured for automated deployment to GitHub Pages via GitHub Actions. Every push to the `main` branch triggers a build and deploy.
+
+### Key Files
+- `.github/workflows/deploy.yml`: GitHub Actions workflow that builds and deploys automatically
+- `client/public/404.html`: SPA redirect handler so routes like `/services` work on page refresh
+- `client/public/.nojekyll`: Prevents GitHub's Jekyll processing
+- `client/public/CNAME`: Custom domain configuration (cygnetsecurity.co.uk)
+- `client/index.html`: Contains SPA redirect receiver script (decodes URLs from 404.html redirect)
+
+### Build Command
+The GitHub Actions workflow runs `npx vite build` which outputs static files to `dist/public/`. This is the frontend only (no Express server needed for static hosting).
+
+### Setup Steps
+1. Create a public GitHub repository and push the codebase
+2. In the repo, go to Settings > Pages > Source: select "GitHub Actions"
+3. Push to `main` to trigger the first automated deployment
+4. In Namecheap DNS, add these records:
+   - A record: `@` pointing to `185.199.108.153`
+   - A record: `@` pointing to `185.199.109.153`
+   - A record: `@` pointing to `185.199.110.153`
+   - A record: `@` pointing to `185.199.111.153`
+   - CNAME record: `www` pointing to `<username>.github.io`
+5. Wait for DNS propagation and SSL certificate provisioning
+
+### Client-Side Routing
+GitHub Pages only serves `index.html` at the root. The `404.html` file handles SPA routing by redirecting unknown paths back to `index.html` with the path encoded as a query parameter, which is then decoded by a script in `index.html` to restore the correct route.
+
 **Future Integration Points**
 - Blog content management (currently hidden, ready for CMS or headless integration)
 - Analytics and tracking (prepared structure, not yet implemented)
