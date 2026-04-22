@@ -575,7 +575,7 @@ export default function ServicesPage() {
                   <h4 className="font-semibold mb-4">What We Do</h4>
                   <ul className="space-y-3">
                     {[
-                      "Gap analysis against current requirements (v3.2)",
+                      "Gap analysis against current requirements (v3.3)",
                       "Readiness assessment using NCSC Readiness Tool",
                       "Technical control implementation guidance",
                       "Asset inventory and scope definition",
