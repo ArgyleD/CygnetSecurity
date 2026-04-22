@@ -1,0 +1,107 @@
+
+
+Brand & Founder
+---------------
+Company: Cygnet Security (founded 2018)
+Founder: Ryan Ward‑McConville
+Positioning: Freelance/lone consultant delivering bespoke consulting and fixed‑cost packages.
+Expertise: Threat & exposure management, vulnerability management, penetration testing, managing technical risk.
+Copy elements you can use/adapt:
+• Hero subtext (About/hero):
+  “A technical cybersecurity leader with over a decade advising executive and senior leadership on risk. I blend business acumen with deep security expertise to design and operate assurance processes that connect risk to business outcomes. I address root causes behind vulnerabilities, using proactive observations to enhance risk management, drive transformation, and reduce risk while protecting revenue.”
+• Tagline options:
+  – “Reduce risk. Protect revenue. Move faster—securely.”
+  – “Turn attack‑surface insight into business outcomes.”
+ Design & UX
+-----------
+• Responsive layout optimized for desktop and mobile.
+• Cybersecurity‑themed color palette (default dark theme):
+  - Background (dark): #0B1220
+  - Surface: #0E152A
+  - Primary accent (teal/cyan): #1rB8A6
+  - Secondary accent (electric cyan): #00E5FF
+  - Text on dark: #E6F1FF
+  - Light theme derives from the same palette with high contrast.
+• Modern, readable typography:
+  - Headings: “Space Grotesk” (or similar grotesk)
+  - Body: “Inter” or “IBM Plex Sans”
+• Dark/Light mode:
+  - Default to **dark**.
+  - Add a sun/moon toggle in the top nav.
+  - Respect system preference on first visit; persist user choice in localStorage.
+• Navigation:
+  - Sticky top nav with the following items (scroll/route as specified below):
+    1) Home (scrolls to top)
+    2) Work with me (scroll to bespoke consultancy section incl. case studies)
+    3) Services (scroll to fixed‑price packages)
+    4) About (scroll to hero/about founder)
+    5) Blog (link to /blog page)
+    6) Contact (scroll to contact form)
+  - Include a LinkedIn icon button in the top nav (placeholder URL: https://www.linkedin.com/in/rysward — leave easily configurable).
+• Overall layout inspiration:
+  - Large hero with clear H1 + sub‑copy + primary CTA (“Work with me”) and secondary CTA (“View services”).
+  - Sectioned layout with generous spacing, iconography for services, stat/credibility band, and footer with contact details and legal.
+Sections & Content
+------------------
+1) Home
+   - Just the top of the page/hero section.
+2) Work with me (Bespoke consulting + Case Studies)
+   - Short intro explaining bespoke, outcome‑driven engagements.
+   - Case studies grid (3–4 cards) with title, client industry, problem → approach → measurable outcomes (use tasteful placeholders; avoid client names).
+   - CTA: “Book an intro call.”
+3) Services (Fixed‑cost packages)
+   - Present as cards with clear scope, outcomes, timeline, and deliverables.
+   - Example packages (use editable placeholders for price):
+     • Rapid Exposure Review (2–3 weeks): External footprint + prioritized exposure backlog; exec summary + 30/60/90 actions.
+     • Vulnerability Management Jumpstart (4 weeks): Tooling tune‑up, backlog triage, SLA policy, metrics pack, operating guide.
+     • Pen Test Readiness & Remediation (4–6 weeks): Readiness checklist, control hardening, remediation sprint plan, re‑test support.
+     • Technical Risk Management Accelerator (6–8 weeks): Risk taxonomy, KRIs/KPIs, reporting into business outcomes; board‑level summary.
+   - Each card has a “Request proposal” CTA → opens Contact section with package preselected.
+4) About (Professional hero)
+   - Prominent headshot/logo area (show placeholder if not supplied).
+   - Pull‑quote from founder (see copy above).
+   - Bullet pillars: “Business‑aligned,” “Evidence‑driven,” “Builder’s mindset.”
+   - Social proof line (certs/methods—placeholders).
+5) Blog (/blog)
+   - List page with cards for posts: title, excerpt, tags, date, link to full post (/blog/:slug).
+   - Create 3 stub posts (Markdown) to demonstrate layout:
+     • “Managing Exposure Like a Product”
+     • “Root‑Cause Vulnerability Management”
+     • “Reporting Risk in Business Language”
+6) Contact Details page
+7) Footer
+   - Company summary, quick links, contact email, © year, privacy link.
+ Assets & Branding
+-----------------
+• Ask the user to upload and confirm a company logo (SVG/PNG). If no logo is available, render a clean typographic logotype “Cygnet Security” and show a placeholder with a prompt to upload later.
+• Add an easily swappable favicon (placeholder).
+ 
+Deliverables
+------------
+1) Complete project in Replit with:
+   - `src/` React app, components, pages, and a `ThemeToggle`.
+   - Blog system that reads Markdown from local `/content` or similar.
+   - `server/` with Express route `POST /api/contact`.
+   - DB integration (Replit Database or SQL DB; see below) with schema file and setup script.
+   - `.env.example` for EMAIL_API_KEY, EMAIL_FROM, EMAIL_TO, DB_URL (if SQL), etc.
+2) Dark theme ON by default with visible toggle in header.
+3) Fully responsive layouts (test: 360px, 768px, 1280px, 1440px).
+4) Top navigation includes a LinkedIn icon/button (href configurable).
+5) Smooth scroll to in‑page sections from the nav.
+6) A “Work with me” section that feels like a persuasive capabilities + proof block with case studies.
+7) Production build script and Replit run command set.
+ 
+Quality Gates
+-------------
+• Lighthouse: target ≥90 for Performance, Accessibility, Best Practices, SEO.
+• No client‑side secrets.
+• Server validates and sanitizes input; logs errors meaningfully.
+• 404 page and basic error boundary.
+• Clear CTAs on every section (“Book an intro call”, “Request proposal”).
+ IMPORTANT
+---------
+• If a logo is not present, ask the user to upload one and show a placeholder in the meantime.
+• Default theme must be dark.
+• Keep content editable and organized so the founder can easily adjust packages, case studies, and blog posts later.
+ 
+ 
