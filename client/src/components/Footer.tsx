@@ -1,24 +1,7 @@
 import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
 
-const quickLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Engagements", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
-];
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const handleNavClick = (href: string) => {
-    if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
 
   return (
     <footer
@@ -26,12 +9,12 @@ export function Footer() {
       data-testid="footer"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img 
-                src={logoImage} 
-                alt="Cygnet Security Logo - Cybersecurity Consulting" 
+              <img
+                src={logoImage}
+                alt="Cygnet Security Logo - Cybersecurity Consulting"
                 className="h-9 w-9"
                 style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
               />
@@ -42,33 +25,6 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               Cygnet Security delivers bespoke cybersecurity consulting to government and enterprise clients. Outcome-driven engagements that connect technical risk to business results.
             </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  {link.href.startsWith("#") ? (
-                    <button
-                      onClick={() => handleNavClick(link.href)}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {link.label}
-                    </button>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                    >
-                      {link.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>
