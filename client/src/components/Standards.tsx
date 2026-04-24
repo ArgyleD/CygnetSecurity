@@ -28,7 +28,7 @@ const standards = [
     category: "Testing & Assurance",
     icon: CheckCircle2,
     items: [
-      { name: "CREST Certified", description: "Penetration testing certification" },
+      { name: "NCSC Cyber Assessment Framework", description: "Risk-based framework for assessing cyber resilience in critical national infrastructure" },
       { name: "OWASP Standards", description: "Application security testing" },
       { name: "Cloud Security (AWS/Azure)", description: "Cloud infrastructure security" },
     ],
