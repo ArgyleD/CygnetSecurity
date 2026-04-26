@@ -84,6 +84,12 @@ export function About() {
               Founded in 2018, Cygnet Security delivers bespoke consulting that addresses the root causes of security exposure, not surface-level fixes. Engagements span vulnerability management, threat modelling, security transformation, and strategic advisory, with outcomes measured against business risk rather than technical metrics alone.
             </p>
 
+            <div className="border-l-2 border-primary pl-4 mb-8 py-1">
+              <p className="text-sm font-semibold leading-relaxed">
+                Every engagement is delivered personally by Ryan. No account managers. No handoffs. No junior resources. Clients work directly with a senior practitioner from initial scoping through to delivery.
+              </p>
+            </div>
+
             <div className="flex flex-wrap gap-3">
               <Badge variant="secondary" data-testid="badge-cert-1">CREST Certified</Badge>
               <Badge variant="secondary" data-testid="badge-cert-2">Penetration Testing</Badge>
