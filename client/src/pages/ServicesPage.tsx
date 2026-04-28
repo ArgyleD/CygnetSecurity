@@ -422,7 +422,7 @@ export default function ServicesPage() {
               Cyber Essentials Implementation
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
-              In the wake of high-profile attacks on M&S, Co-op, and Jaguar Land Rover, cyber security is no longer just an IT issue. It's a boardroom priority. 
+              Following a series of high-profile attacks on major UK businesses, cyber security is no longer just an IT issue. It's a boardroom priority.
             </p>
             <p className="text-lg font-medium text-primary max-w-3xl mx-auto">
               Get Cyber Essentials certified and don't be an easy target. It's time to act.
