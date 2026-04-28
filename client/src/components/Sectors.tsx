@@ -73,7 +73,7 @@ const sectors = [
     icon: ShieldCheck,
     description:
       "Offensive security, penetration testing, and security consultancy firms",
-    experience: "CREST-certified testing, compliance (PCI DSS, Cyber Essentials+)",
+    experience: "Penetration Testing, compliance (PCI DSS, Cyber Essentials+)",
   },
 ];
 

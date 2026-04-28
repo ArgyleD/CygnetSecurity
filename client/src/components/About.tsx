@@ -91,8 +91,7 @@ export function About() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Badge variant="secondary" data-testid="badge-cert-1">CREST Certified</Badge>
-              <Badge variant="secondary" data-testid="badge-cert-2">Penetration Testing</Badge>
+              <Badge variant="secondary" data-testid="badge-cert-1">Penetration Testing</Badge>
               <Badge variant="secondary" data-testid="badge-cert-3">Red Teaming</Badge>
               <Badge variant="secondary" data-testid="badge-cert-4">ISO27001</Badge>
               <Badge variant="secondary" data-testid="badge-cert-5">Security Operations</Badge>
