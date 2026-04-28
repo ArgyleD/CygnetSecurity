@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Impact } from "@/components/Impact";
@@ -76,6 +78,20 @@ function Contact() {
 }
 
 export default function Home() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen">
       <Navigation />
