@@ -39,6 +39,7 @@ const methodologies = [
   "EPSS (Exploit Prediction Scoring System)",
   "SSVC (Stakeholder-Specific Vulnerability Categorization)",
   "CVSS (Common Vulnerability Scoring System)",
+  "Qualys Vulnerability Management",
   "SAST & DAST",
   "Red Team Operations",
   "Threat Modeling",
@@ -65,8 +66,8 @@ export function Standards() {
             data-testid="text-standards-intro"
           >
             Deep experience implementing, auditing, and advising on industry-leading
-            security standards and frameworks. From ISO27001 accreditation to
-            modern vulnerability management methodologies.
+            security standards and frameworks. From ISO27001 accreditation and NCSC Cyber Assessment Framework (CAF) to
+            modern vulnerability management methodologies including Qualys.
           </p>
         </div>
 
