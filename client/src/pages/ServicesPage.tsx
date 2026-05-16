@@ -260,7 +260,7 @@ export default function ServicesPage() {
               Security Metrics Toolkit Implementation
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional customisation and automation of PowerBI templates for security metrics programs aligned to NIST SP 800-55.
+              Professional customisation and automation of PowerBI templates for security metrics programs aligned to NIST SP 800-53.
             </p>
           </div>
 
@@ -287,7 +287,7 @@ export default function ServicesPage() {
                   "Excel data source configuration and effort to automate metric collection through API calls your existing tools have",
                   "Integration with Teams, OneDrive, or SharePoint",
                   "Training on metric tracking and target management",
-                  "Alignment to NIST 800-55 metric types",
+                  "Alignment to NIST 800-53 metric types",
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />

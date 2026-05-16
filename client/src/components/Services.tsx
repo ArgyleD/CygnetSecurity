@@ -33,7 +33,7 @@ const serviceCards = [
   {
     title: "Security Metrics Toolkit",
     description:
-      "Professional PowerBI dashboard implementation aligned to NIST SP 800-55 for visualising and tracking security metrics programmes.",
+      "Professional PowerBI dashboard implementation aligned to NIST SP 800-53 for visualising and tracking security metrics programmes.",
   },
   {
     title: "Cyber Essentials",
