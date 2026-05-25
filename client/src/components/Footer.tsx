@@ -1,4 +1,5 @@
 import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
+import { LOGO_FILTER, CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ export function Footer() {
                 src={logoImage}
                 alt="Cygnet Security Logo - Cybersecurity Consulting"
                 className="h-9 w-9"
-                style={{ filter: 'brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)' }}
+                style={{ filter: LOGO_FILTER }}
               />
               <span className="font-heading font-semibold text-lg">
                 Cygnet Security
@@ -33,7 +34,7 @@ export function Footer() {
               <li data-testid="text-contact-email">
                 Email:{" "}
                 <a
-                  href="mailto:ryan@cygnetsecurity.co.uk"
+                  href={CONTACT_EMAIL}
                   className="hover:text-primary transition-colors"
                 >
                   ryan[@]cygnetsecurity.co.uk

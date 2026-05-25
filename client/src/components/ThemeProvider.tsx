@@ -30,10 +30,7 @@ export function ThemeProvider({
     const stored = localStorage.getItem(storageKey);
     if (stored === "light" || stored === "dark") return stored;
     
-    const systemPreference = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-    return systemPreference || defaultTheme;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   });
 
   useEffect(() => {

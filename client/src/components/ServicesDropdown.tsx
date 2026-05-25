@@ -10,70 +10,20 @@ const servicesLinks = [
   { label: "Cyber Essentials", href: "/services#cyber-essentials" },
 ];
 
-interface ServicesDropdownProps {
-  mobile?: boolean;
-  onNavigate?: () => void;
-}
-
-export function ServicesDropdown({ mobile = false, onNavigate }: ServicesDropdownProps) {
+export function ServicesDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!isOpen) return;
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-    if (onNavigate) {
-      onNavigate();
-    }
-  };
-
-  if (mobile) {
-    return (
-      <div className="flex flex-col">
-        <Button
-          variant="ghost"
-          className="w-full justify-between hover-elevate active-elevate-2"
-          onClick={() => setIsOpen(!isOpen)}
-          data-testid="button-mobile-services-toggle"
-        >
-          Services
-          <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
-        </Button>
-        {isOpen && (
-          <div className="pl-4 py-2 space-y-1">
-            {servicesLinks.map((link) => (
-              <Link key={link.label} href={link.href}>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-start text-sm hover-elevate active-elevate-2"
-                  onClick={handleLinkClick}
-                  data-testid={`link-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  {link.label}
-                </Button>
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  }
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -93,7 +43,7 @@ export function ServicesDropdown({ mobile = false, onNavigate }: ServicesDropdow
               <Button
                 variant="ghost"
                 className="w-full justify-start px-4 py-2 text-sm hover-elevate active-elevate-2"
-                onClick={handleLinkClick}
+                onClick={() => setIsOpen(false)}
                 data-testid={`link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.label}

@@ -7,18 +7,13 @@ import { Linkedin, Menu, X, Mail, ArrowRight } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
 import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
-
-const LINKEDIN_URL = "https://www.linkedin.com/in/rysward";
-const WHATSAPP_URL = "https://wa.me/447917666267";
-const EMAIL_URL = "mailto:ryan@cygnetsecurity.co.uk";
-
-const LOGO_FILTER =
-  "brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(435%) hue-rotate(123deg) brightness(95%) contrast(90%)";
+import { LOGO_FILTER, CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_URL } from "@/lib/constants";
+import { navigateToSection } from "@/lib/utils";
 
 const navItems = [
   { label: "Engagements", href: "#work" },
   { label: "About", href: "#about" },
-  // { label: "Blog", href: "/blog", isRoute: true }, // Hidden for first release - restore for v2
+  // { label: "Blog", href: "/blog" }, // Hidden for first release - restore for v2
 ];
 
 const mobileServicesLinks = [
@@ -33,6 +28,8 @@ export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const closeMobile = () => setMobileMenuOpen(false);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -44,29 +41,6 @@ export function Navigation() {
     document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileMenuOpen]);
-
-  const handleNavClick = (href: string, isRoute?: boolean) => {
-    if (isRoute) return;
-    setMobileMenuOpen(false);
-    if (href.startsWith("#")) {
-      if (location !== "/") {
-        window.location.href = "/" + href;
-      } else {
-        const element = document.querySelector(href);
-        if (element) element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
-
-  const handleContactClick = () => {
-    setMobileMenuOpen(false);
-    if (location !== "/") {
-      window.location.href = "/#contact";
-    } else {
-      const element = document.querySelector("#contact");
-      if (element) element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <>
@@ -105,7 +79,7 @@ export function Navigation() {
                 <Button
                   key={item.label}
                   variant="ghost"
-                  onClick={() => handleNavClick(item.href)}
+                  onClick={() => navigateToSection(item.href, location)}
                   className="hover-elevate active-elevate-2"
                   data-testid={`link-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                 >
@@ -136,7 +110,7 @@ export function Navigation() {
                 className="hidden md:flex hover-elevate active-elevate-2"
                 data-testid="button-email"
               >
-                <a href={EMAIL_URL}>
+                <a href={CONTACT_EMAIL}>
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </a>
@@ -182,7 +156,7 @@ export function Navigation() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={closeMobile}
               data-testid="mobile-menu-backdrop"
             />
 
@@ -211,7 +185,7 @@ export function Navigation() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={closeMobile}
                   aria-label="Close menu"
                   data-testid="button-mobile-close"
                 >
@@ -227,7 +201,7 @@ export function Navigation() {
                   {navItems.map((item) => (
                     <button
                       key={item.label}
-                      onClick={() => handleNavClick(item.href)}
+                      onClick={() => navigateToSection(item.href, location, closeMobile)}
                       className="w-full text-left py-4 font-heading font-semibold text-lg border-b border-card-border/50 hover:text-primary transition-colors"
                       data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s+/g, "-")}`}
                     >
@@ -246,7 +220,7 @@ export function Navigation() {
                       <a
                         key={link.label}
                         href={link.href}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={closeMobile}
                         className="flex items-center justify-between py-2.5 text-sm text-muted-foreground hover:text-primary transition-colors border-b border-card-border/30 last:border-0"
                         data-testid={`link-mobile-service-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                       >
@@ -260,7 +234,7 @@ export function Navigation() {
                 {/* Primary CTA */}
                 <Button
                   className="w-full hover-elevate active-elevate-2"
-                  onClick={handleContactClick}
+                  onClick={() => navigateToSection("#contact", location, closeMobile)}
                   data-testid="button-mobile-cta"
                 >
                   Request a Consultation
@@ -271,7 +245,7 @@ export function Navigation() {
               {/* Panel footer — contact links */}
               <div className="px-6 py-6 border-t border-card-border shrink-0 space-y-3">
                 <a
-                  href={EMAIL_URL}
+                  href={CONTACT_EMAIL}
                   className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
                   data-testid="link-mobile-email"
                 >

@@ -7,6 +7,7 @@ import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { navigateToSection } from "@/lib/utils";
 
 const predefinedServices = [
   {
@@ -141,9 +142,7 @@ export default function ServicesPage() {
     }
   }, [location]);
 
-  const handleContactClick = () => {
-    window.location.href = "/#contact";
-  };
+  const handleContactClick = () => navigateToSection("#contact", location);
 
   return (
     <div className="min-h-screen">
