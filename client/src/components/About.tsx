@@ -34,7 +34,7 @@ export function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Pull-quote lead — full width */}
-        <div className="border-l-4 border-primary pl-8 mb-16 max-w-3xl">
+        <div className="border-l-4 border-primary pl-8 mb-16 max-w-3xl" data-reveal>
           <blockquote
             className="font-heading text-xl sm:text-2xl md:text-3xl font-medium leading-snug mb-4"
             data-testid="blockquote-about"
@@ -47,7 +47,7 @@ export function About() {
         </div>
 
         {/* Profile row — small card left, bio right */}
-        <div className="grid gap-10 lg:grid-cols-[240px_1fr] items-start mb-16">
+        <div className="grid gap-10 lg:grid-cols-[240px_1fr] items-start mb-16" data-reveal>
 
           {/* Profile card */}
           <div
@@ -102,7 +102,7 @@ export function About() {
         </div>
 
         {/* Pillar cards — unchanged */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3" data-reveal-stagger>
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
@@ -110,6 +110,7 @@ export function About() {
                 key={idx}
                 className="p-6 text-center overflow-visible"
                 data-testid={`card-pillar-${idx + 1}`}
+                data-reveal-item
               >
                 <div className="inline-flex p-4 bg-primary/10 rounded-md mb-4">
                   <Icon className="h-8 w-8 text-primary" />

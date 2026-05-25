@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Impact } from "@/components/Impact";
@@ -19,7 +20,7 @@ function Contact() {
       data-testid="section-contact"
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-reveal>
           <h2
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-contact"
@@ -34,8 +35,8 @@ function Contact() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <Card className="p-8 overflow-visible" data-testid="card-contact-email">
+        <div className="grid gap-6 md:grid-cols-2" data-reveal-stagger>
+          <Card className="p-8 overflow-visible" data-testid="card-contact-email" data-reveal-item>
             <div className="flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-md shrink-0">
                 <Mail className="h-6 w-6 text-primary" />
@@ -53,7 +54,7 @@ function Contact() {
             </div>
           </Card>
 
-          <Card className="p-8 overflow-visible" data-testid="card-contact-phone">
+          <Card className="p-8 overflow-visible" data-testid="card-contact-phone" data-reveal-item>
             <div className="flex items-start gap-4">
               <div className="p-3 bg-primary/10 rounded-md shrink-0">
                 <Phone className="h-6 w-6 text-primary" />
@@ -79,6 +80,7 @@ function Contact() {
 
 export default function Home() {
   const [location] = useLocation();
+  useScrollReveal();
 
   useEffect(() => {
     const hash = window.location.hash;

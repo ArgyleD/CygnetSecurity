@@ -67,7 +67,7 @@ export function Impact() {
       data-testid="section-impact"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-reveal>
           <h2
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-impact"
@@ -83,7 +83,7 @@ export function Impact() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
           {impactMetrics.map((item) => {
             const Icon = item.icon;
             return (
@@ -91,6 +91,7 @@ export function Impact() {
                 key={item.id}
                 className="p-6 overflow-visible hover-elevate active-elevate-2 transition-all duration-300"
                 data-testid={`card-impact-${item.id}`}
+                data-reveal-item
               >
                 <div className="mb-4">
                   <div className="inline-flex p-3 bg-primary/10 rounded-md">

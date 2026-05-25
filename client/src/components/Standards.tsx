@@ -54,7 +54,7 @@ export function Standards() {
       data-testid="section-standards"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-reveal>
           <h2
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-standards"
@@ -71,7 +71,7 @@ export function Standards() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3 mb-12">
+        <div className="grid gap-8 md:grid-cols-3 mb-12" data-reveal-stagger>
           {standards.map((standard) => {
             const Icon = standard.icon;
             return (
@@ -79,6 +79,7 @@ export function Standards() {
                 key={standard.id}
                 className="p-6 overflow-visible"
                 data-testid={`card-standard-${standard.id}`}
+                data-reveal-item
               >
                 <div className="mb-6">
                   <div className="inline-flex p-3 bg-primary/10 rounded-md mb-4">
@@ -106,7 +107,7 @@ export function Standards() {
           })}
         </div>
 
-        <Card className="p-8 bg-card/50 overflow-visible" data-testid="card-methodologies">
+        <Card className="p-8 bg-card/50 overflow-visible" data-testid="card-methodologies" data-reveal>
           <div className="text-center mb-6">
             <h3 className="font-heading font-semibold text-2xl mb-2">
               Advanced Methodologies

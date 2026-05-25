@@ -70,7 +70,7 @@ export function Services() {
       data-testid="section-services"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-reveal>
           <h2
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-services"
@@ -92,6 +92,7 @@ export function Services() {
         <Card
           className="p-8 mb-10 overflow-visible border-primary/20 bg-card/60"
           data-testid="card-bespoke-featured"
+          data-reveal
         >
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <div>
@@ -135,12 +136,13 @@ export function Services() {
         </Card>
 
         {/* 4 Service Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-12" data-reveal-stagger>
           {serviceCards.map((service, idx) => (
             <Card
               key={idx}
               className="p-6 overflow-visible text-center"
               data-testid={`card-service-${idx + 1}`}
+              data-reveal-item
             >
               <h3 className="font-heading text-lg font-semibold mb-3">
                 {service.title}

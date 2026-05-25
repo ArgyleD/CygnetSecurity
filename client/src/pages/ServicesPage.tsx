@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const predefinedServices = [
   {
@@ -125,6 +126,7 @@ const caseStudies = [
 
 export default function ServicesPage() {
   const [location] = useLocation();
+  useScrollReveal();
 
   useEffect(() => {
     // Handle hash-based navigation within the page
