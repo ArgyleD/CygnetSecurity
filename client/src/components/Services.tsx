@@ -81,10 +81,8 @@ export function Services() {
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             data-testid="text-services-intro"
           >
-            Outcome-driven engagements tailored to your organisation's specific security
-            challenges. Cygnet Security addresses the root causes behind vulnerabilities,
-            applies proactive risk management, and designs durable solutions that reduce
-            exposure and protect business continuity.
+            Choose from bespoke engagements for complex, cross-functional challenges or
+            pre-defined work packages for defined outcomes with transparent scope and timelines.
           </p>
         </div>
 

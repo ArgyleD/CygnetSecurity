@@ -39,6 +39,13 @@ export function Hero() {
           business outcomes for government and enterprise.
         </p>
 
+        <p
+          className="text-sm text-muted-foreground/70 mb-8 tracking-wide"
+          data-testid="text-hero-differentiator"
+        >
+          Solo practitioner &mdash; no account managers, no junior resources. You work directly with a senior consultant from day one.
+        </p>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             size="lg"

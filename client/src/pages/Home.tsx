@@ -4,7 +4,6 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Impact } from "@/components/Impact";
-import { Sectors } from "@/components/Sectors";
 import { Services } from "@/components/Services";
 import { Standards } from "@/components/Standards";
 import { About } from "@/components/About";
@@ -101,7 +100,6 @@ export default function Home() {
         <Hero />
         <Services />
         <Impact />
-        <Sectors />
         <About />
         <Standards />
         <Contact />

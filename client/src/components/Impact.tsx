@@ -1,11 +1,17 @@
 import { Card } from "@/components/ui/card";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   Award,
   TrendingDown,
   Shield,
   Users,
   Globe,
   Target,
+  Info,
 } from "lucide-react";
 
 const impactMetrics = [
@@ -98,20 +104,35 @@ export function Impact() {
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
                 </div>
-                <div className="mb-2">
-                  <div className="font-heading text-3xl font-bold text-primary mb-1">
-                    {item.metric}
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <div className="font-heading text-3xl font-bold text-primary mb-1">
+                      {item.metric}
+                    </div>
+                    <h3
+                      className="font-heading font-semibold text-lg"
+                      data-testid={`heading-impact-${item.id}`}
+                    >
+                      {item.label}
+                    </h3>
                   </div>
-                  <h3
-                    className="font-heading font-semibold text-lg"
-                    data-testid={`heading-impact-${item.id}`}
-                  >
-                    {item.label}
-                  </h3>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button
+                        className="mt-1 shrink-0 text-muted-foreground/40 hover:text-primary transition-colors"
+                        aria-label={`More detail: ${item.label}`}
+                      >
+                        <Info className="h-4 w-4" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent
+                      side="top"
+                      className="max-w-[220px] text-center"
+                    >
+                      {item.description}
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  {item.description}
-                </p>
               </Card>
             );
           })}

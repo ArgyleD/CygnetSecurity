@@ -1,8 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck, Award } from "lucide-react";
-import { useEffect } from "react";
+import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
@@ -125,6 +125,69 @@ const caseStudies = [
   },
 ];
 
+function CaseStudyGrid() {
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  return (
+    <div className="grid gap-8 md:grid-cols-2 mb-12">
+      {caseStudies.map((study) => {
+        const Icon = study.icon;
+        const isExpanded = expandedId === study.id;
+        return (
+          <Card
+            key={study.id}
+            className="p-6 overflow-visible"
+            data-testid={`card-case-study-${study.id}`}
+          >
+            {/* Always-visible header */}
+            <div className="flex items-center gap-3 mb-4">
+              <div className="inline-flex p-3 bg-primary/10 rounded-md">
+                <Icon className="h-6 w-6 text-primary" />
+              </div>
+              <Badge variant="secondary" data-testid={`badge-case-study-${study.id}`}>
+                {study.industry}
+              </Badge>
+            </div>
+            <h3 className="font-heading text-xl font-semibold mb-3">
+              {study.title}
+            </h3>
+
+            {/* Outcome — always visible, leads the card */}
+            <div className="border-l-2 border-primary/40 pl-4 mb-4">
+              <p className="text-sm text-primary/90">{study.outcome}</p>
+            </div>
+
+            {/* Expandable detail */}
+            {isExpanded && (
+              <div className="space-y-4 mb-4 pt-2 border-t border-border">
+                <div>
+                  <h4 className="font-semibold text-sm mb-2 mt-4">Problem</h4>
+                  <p className="text-sm text-muted-foreground">{study.problem}</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm mb-2">Approach</h4>
+                  <p className="text-sm text-muted-foreground">{study.approach}</p>
+                </div>
+              </div>
+            )}
+
+            <button
+              onClick={() => setExpandedId(isExpanded ? null : study.id)}
+              className="flex items-center gap-1 text-sm text-primary hover:text-primary/80 transition-colors mt-1"
+              data-testid={`button-expand-case-study-${study.id}`}
+            >
+              {isExpanded ? "Show less" : "How we did it"}
+              <ArrowRight
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${isExpanded ? "rotate-90" : ""}`}
+              />
+            </button>
+          </Card>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   const [location] = useLocation();
   useScrollReveal();
@@ -181,56 +244,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 mb-12">
-            {caseStudies.map((study) => {
-              const Icon = study.icon;
-              return (
-                <Card
-                  key={study.id}
-                  className="p-6 hover-elevate overflow-visible"
-                  data-testid={`card-case-study-${study.id}`}
-                >
-                  <div className="mb-4">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="inline-flex p-3 bg-primary/10 rounded-md">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <Badge variant="secondary" data-testid={`badge-case-study-${study.id}`}>
-                        Case Study {study.id}
-                      </Badge>
-                    </div>
-                    <h3 className="font-heading text-xl font-semibold mb-2">
-                      {study.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {study.industry}
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-sm mb-2">Problem</h4>
-                      <p className="text-sm text-muted-foreground">
-                        {study.problem}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-sm mb-2">Approach</h4>
-                      <p className="text-sm text-muted-foreground">
-                        {study.approach}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-sm mb-2">Outcome</h4>
-                      <p className="text-sm text-primary/90">{study.outcome}</p>
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+          <CaseStudyGrid />
 
           <div className="text-center">
             <Button
@@ -430,36 +444,43 @@ export default function ServicesPage() {
             </p>
           </div>
 
+          {/* Merged: What is CE + 10 Years Proven */}
           <div className="mb-12">
             <Card className="p-8 overflow-visible">
-              <h3 className="font-heading text-2xl font-semibold mb-6">
+              <h3 className="font-heading text-2xl font-semibold mb-4">
                 What is Cyber Essentials?
               </h3>
-              <p className="text-muted-foreground mb-4">
-                Cyber Essentials is a UK Government-backed certification scheme with a proven 10-year track record (2014-2024). Data from the NCSC's independent evaluation shows organisations with Cyber Essentials are <strong className="text-foreground">92% less likely to make insurance claims</strong>.
-              </p>
               <p className="text-muted-foreground mb-6">
-                These 5 foundational controls protect against the basic weaknesses that even sophisticated attackers exploit. The scheme demonstrates your commitment to cyber security and is often required for government contracts and supply chain relationships.
+                A UK Government-backed certification scheme with a proven 10-year track record. Even sophisticated attackers exploit basic weaknesses — these five controls work.{" "}
+                <a
+                  href="https://www.ncsc.gov.uk/cyberessentials/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Learn more at NCSC ↗
+                </a>
               </p>
-              <div className="grid gap-6 md:grid-cols-2">
+
+              <div className="grid gap-6 md:grid-cols-2 mb-8">
                 <div>
                   <h4 className="font-semibold mb-3">Proven Business Benefits</h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span><strong className="text-foreground">92% less likely</strong> to make insurance claims (NCSC evaluation)</span>
+                      <span><strong className="text-foreground">92% fewer</strong> insurance claims (NCSC evaluation)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span><strong className="text-foreground">69% increased</strong> market competitiveness (10-year data)</span>
+                      <span><strong className="text-foreground">69% increased</strong> market competitiveness</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span><strong className="text-foreground">48% faster</strong> supplier due diligence when certified</span>
+                      <span><strong className="text-foreground">48% faster</strong> supplier due diligence</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span><strong className="text-foreground">86%</strong> report stronger senior management buy-in</span>
+                      <span><strong className="text-foreground">86%</strong> report stronger board buy-in</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
@@ -489,81 +510,11 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </Card>
-          </div>
 
-          <div className="mb-12">
-            <Card className="p-8 bg-primary/5 border-primary/20 overflow-visible">
-              <div className="text-center">
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <Award className="h-6 w-6 text-primary" />
-                  <h3 className="font-heading text-2xl font-semibold">
-                    10 Years Proven
-                  </h3>
-                </div>
-                <p className="text-muted-foreground mb-4">
-                  Cyber Essentials has protected UK organisations since 2014. The NCSC's independent 10-year evaluation confirms what we've seen firsthand: <strong className="text-foreground">even sophisticated attackers exploit basic weaknesses</strong>, and these 5 controls work.
-                </p>
-                <div className="grid gap-6 md:grid-cols-4 mt-8">
-                  <div className="text-center">
-                    <div className="font-heading text-3xl font-bold text-primary mb-2">92%</div>
-                    <p className="text-sm text-muted-foreground">Fewer insurance claims</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-heading text-3xl font-bold text-primary mb-2">69%</div>
-                    <p className="text-sm text-muted-foreground">Market competitiveness boost</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-heading text-3xl font-bold text-primary mb-2">86%</div>
-                    <p className="text-sm text-muted-foreground">Improved board understanding</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="font-heading text-3xl font-bold text-primary mb-2">48%</div>
-                    <p className="text-sm text-muted-foreground">Faster supplier onboarding</p>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground mt-6 italic">
-                  Source: NCSC Independent Impact Evaluation (2014-2024)
-                </p>
-              </div>
+              <p className="text-xs text-muted-foreground italic">
+                Source: NCSC Independent Impact Evaluation (2014–2024)
+              </p>
             </Card>
-          </div>
-
-          <div className="mb-12">
-            <h3 className="font-heading text-2xl font-semibold mb-8 text-center">
-              The Five Technical Controls
-            </h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  title: "Firewalls",
-                  description: "Control network traffic between trusted and untrusted networks, blocking unauthorised access.",
-                },
-                {
-                  title: "Secure Configuration",
-                  description: "Remove or disable unnecessary functionality and change default passwords and settings.",
-                },
-                {
-                  title: "Security Update Management",
-                  description: "Apply security patches and updates promptly to fix known vulnerabilities.",
-                },
-                {
-                  title: "User Access Control",
-                  description: "Ensure users only have access to data and services they need for their role.",
-                },
-                {
-                  title: "Malware Protection",
-                  description: "Protect against malicious software using antivirus and application allow listing.",
-                },
-              ].map((control, idx) => (
-                <Card key={idx} className="p-6 overflow-visible">
-                  <h4 className="font-semibold mb-2">{control.title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {control.description}
-                  </p>
-                </Card>
-              ))}
-            </div>
           </div>
 
           <div className="mb-12">
@@ -617,7 +568,7 @@ export default function ServicesPage() {
 
           <div className="bg-background rounded-md p-6 mb-8">
             <p className="text-sm text-muted-foreground text-center">
-              Cyber Essentials is a UK Government scheme delivered by IASME and the National Cyber Security Centre (NCSC). 
+              Cyber Essentials is a UK Government scheme delivered by IASME and the National Cyber Security Centre (NCSC).
               Cygnet Security is an independent consultant providing implementation services to help organisations achieve certification.
             </p>
           </div>
