@@ -47,6 +47,16 @@ export function Footer() {
                 <br />
                 Company Registration: 11168915
               </li>
+              <li>
+                <a
+                  href="/Cygnet-Security-Capability-Statement.pdf"
+                  download
+                  className="hover:text-primary transition-colors"
+                  data-testid="link-footer-capability-statement"
+                >
+                  Download our Capability Statement (PDF)
+                </a>
+              </li>
             </ul>
           </div>
         </div>

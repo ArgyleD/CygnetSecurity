@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Target, LineChart, Wrench } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Target, LineChart, Wrench, Download } from "lucide-react";
 import headshotImage from "@assets/mugshot.jpg";
 
 const pillars = [
@@ -86,11 +87,11 @@ export function About() {
 
             <div className="border-l-2 border-primary pl-4 mb-8 py-1">
               <p className="text-sm font-semibold leading-relaxed">
-                Every engagement is delivered personally by Ryan. No account managers. No handoffs. No junior resources. Clients work directly with a senior practitioner from initial scoping through to delivery.
+                Every engagement is delivered personally by Ryan. No account managers. No handoffs. No junior resources. Clients work directly with a senior practitioner from initial scoping through to delivery. For continuity of service, Cygnet Security maintains relationships with a trusted network of vetted associate practitioners and documented handover procedures &mdash; ensuring engagements remain on track even when surge capacity or specialist cover is required.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-6">
               <Badge variant="secondary" data-testid="badge-cert-1">Penetration Testing</Badge>
               <Badge variant="secondary" data-testid="badge-cert-3">Red Teaming</Badge>
               <Badge variant="secondary" data-testid="badge-cert-4">ISO27001</Badge>
@@ -98,6 +99,17 @@ export function About() {
               <Badge variant="secondary" data-testid="badge-cert-6">Risk Assessment</Badge>
               <Badge variant="secondary" data-testid="badge-cert-7">Threat Modelling</Badge>
             </div>
+
+            <a href="/Cygnet-Security-Capability-Statement.pdf" download>
+              <Button
+                variant="outline"
+                className="hover-elevate active-elevate-2"
+                data-testid="link-download-capability-statement"
+              >
+                Download Capability Statement
+                <Download className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
 
