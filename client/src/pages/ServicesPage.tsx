@@ -13,6 +13,7 @@ const predefinedServices = [
   {
     id: 1,
     title: "Rapid Exposure Review",
+    category: "vem",
     duration: "2-3 weeks",
     price: "Contact for pricing",
     description:
@@ -28,6 +29,7 @@ const predefinedServices = [
   {
     id: 2,
     title: "Vulnerability Management Jumpstart",
+    category: "vem",
     duration: "4 weeks",
     price: "Contact for pricing",
     description:
@@ -44,6 +46,7 @@ const predefinedServices = [
   {
     id: 3,
     title: "Pen Test Readiness & Remediation",
+    category: "tra",
     duration: "4-6 weeks",
     price: "Contact for pricing",
     description:
@@ -59,6 +62,7 @@ const predefinedServices = [
   {
     id: 4,
     title: "Technical Risk Management Accelerator",
+    category: "tra",
     duration: "6-12 weeks",
     price: "Contact for pricing",
     description:
@@ -188,6 +192,73 @@ function CaseStudyGrid() {
   );
 }
 
+function PackageCards({
+  category,
+  onContactClick,
+}: {
+  category: string;
+  onContactClick: () => void;
+}) {
+  const items = predefinedServices.filter((s) => s.category === category);
+
+  return (
+    <div className="grid gap-8 md:grid-cols-2">
+      {items.map((service) => (
+        <Card
+          key={service.id}
+          className="p-6 flex flex-col overflow-visible"
+          data-testid={`card-service-${service.id}`}
+        >
+          <div className="flex-1">
+            <div className="mb-4">
+              <Badge
+                variant="outline"
+                className="mb-3"
+                data-testid={`badge-duration-${service.id}`}
+              >
+                <Clock className="h-3 w-3 mr-1" />
+                {service.duration}
+              </Badge>
+              <h3 className="font-heading text-xl font-semibold mb-2">
+                {service.title}
+              </h3>
+              <p className="text-sm text-primary font-medium mb-4">
+                {service.price}
+              </p>
+              <p className="text-sm text-muted-foreground mb-6">
+                {service.description}
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="font-semibold text-sm mb-3">Deliverables</h4>
+              <ul className="space-y-2">
+                {service.deliverables.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <Button
+            className="w-full hover-elevate active-elevate-2"
+            onClick={onContactClick}
+            data-testid={`button-request-proposal-${service.id}`}
+          >
+            Request proposal
+          </Button>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   const [location] = useLocation();
   useScrollReveal();
@@ -222,25 +293,25 @@ export default function ServicesPage() {
               Security Services
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              From bespoke consulting to structured work packages, choose the approach that best fits your security challenges. All engagements deliver measurable outcomes aligned to your business objectives.
+              Three areas of work. Each one scoped to your organisation, or run as a fixed-scope package where the shape of the work is already clear &mdash; every engagement delivered personally.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Bespoke Consulting */}
+      {/* Selected Engagements */}
       <section
-        id="bespoke-consulting"
+        id="engagements"
         className="py-20 md:py-32 bg-background"
-        data-testid="section-bespoke-consulting"
+        data-testid="section-engagements"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Bespoke Consulting
+              Selected Engagements
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Outcome-driven engagements tailored to your unique security challenges. Addressing root causes, using proactive observations to enhance risk management, drive transformation, and protect revenue.
+              Work across UK government, critical national infrastructure, and global enterprise &mdash; addressing root causes rather than surface-level fixes, with outcomes measured against business risk.
             </p>
           </div>
 
@@ -260,24 +331,41 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Security Metrics Toolkit */}
+      {/* Vulnerability & Exposure Management */}
       <section
-        id="security-metrics-toolkit"
+        id="vulnerability-exposure-management"
         className="py-20 md:py-32 bg-card"
-        data-testid="section-metrics-toolkit"
+        data-testid="section-vulnerability-exposure-management"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex p-4 bg-primary/10 rounded-md mb-6">
-              <BarChart3 className="h-12 w-12 text-primary" />
-            </div>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Security Metrics Toolkit Implementation
+              Vulnerability &amp; Exposure Management
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional customisation and automation of PowerBI templates for security metrics programs aligned to NIST SP 800-53.
+              Turning an unmanageable backlog into a risk-based programme you can run and report on. EPSS and SSVC triage, SLAs by criticality, and metrics your board will read.
             </p>
           </div>
+
+          <PackageCards category="vem" onContactClick={handleContactClick} />
+
+          {/* Security Metrics Toolkit */}
+          <div
+            id="security-metrics-toolkit"
+            className="mt-20 scroll-mt-24"
+            data-testid="section-metrics-toolkit"
+          >
+            <div className="text-center mb-12">
+              <div className="inline-flex p-4 bg-primary/10 rounded-md mb-6">
+                <BarChart3 className="h-12 w-12 text-primary" />
+              </div>
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold mb-6">
+                Security Metrics Toolkit Implementation
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Professional customisation and automation of PowerBI templates for security metrics programs aligned to NIST SP 800-53.
+              </p>
+            </div>
 
           <div className="bg-background rounded-md p-8 mb-12">
             <h3 className="font-heading text-xl font-semibold mb-4">
@@ -345,86 +433,34 @@ export default function ServicesPage() {
               Discuss your requirements
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pre-defined Work Packages */}
+      {/* Technical Risk Advisory */}
       <section
-        id="work-packages"
+        id="technical-risk-advisory"
         className="py-20 md:py-32 bg-background"
-        data-testid="section-work-packages"
+        data-testid="section-technical-risk-advisory"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Pre-defined Work Packages
+              Technical Risk Advisory
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Transparent, predictable engagements with clear scope, timelines, and deliverables. Get started quickly with proven methodologies.
+              Connecting technical findings to business risk so leadership can act on them. Risk taxonomy, KRIs and KPIs, and remediation that outlives the pen test report.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
-            {predefinedServices.map((service) => (
-              <Card
-                key={service.id}
-                className="p-6 flex flex-col overflow-visible"
-                data-testid={`card-service-${service.id}`}
-              >
-                <div className="flex-1">
-                  <div className="mb-4">
-                    <Badge
-                      variant="outline"
-                      className="mb-3"
-                      data-testid={`badge-duration-${service.id}`}
-                    >
-                      <Clock className="h-3 w-3 mr-1" />
-                      {service.duration}
-                    </Badge>
-                    <h3 className="font-heading text-xl font-semibold mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-primary font-medium mb-4">
-                      {service.price}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-6">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-sm mb-3">Deliverables</h4>
-                    <ul className="space-y-2">
-                      {service.deliverables.map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-sm text-muted-foreground"
-                        >
-                          <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <Button
-                  className="w-full hover-elevate active-elevate-2"
-                  onClick={handleContactClick}
-                  data-testid={`button-request-proposal-${service.id}`}
-                >
-                  Request proposal
-                </Button>
-              </Card>
-            ))}
-          </div>
+          <PackageCards category="tra" onContactClick={handleContactClick} />
         </div>
       </section>
 
-      {/* Cyber Essentials Implementation */}
+      {/* Cyber Essentials Readiness */}
       <section
-        id="cyber-essentials"
+        id="cyber-essentials-readiness"
         className="py-20 md:py-32 bg-card"
         data-testid="section-cyber-essentials"
       >
@@ -434,7 +470,7 @@ export default function ServicesPage() {
               <FileCheck className="h-12 w-12 text-primary" />
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Cyber Essentials Implementation
+              Cyber Essentials Readiness
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
               Following a series of high-profile attacks on major UK businesses, cybersecurity is no longer just an IT issue. It's a boardroom priority.

@@ -26,24 +26,32 @@ const caseStudyPreviews = [
 
 const serviceCards = [
   {
-    title: "Pre-defined Work Packages",
+    title: "Vulnerability & Exposure Management",
+    href: "/services#vulnerability-exposure-management",
     description:
-      "Transparent, predictable engagements with clear scope, timelines, and deliverables for rapid exposure review, vulnerability management, and more.",
+      "Turning an unmanageable backlog into a risk-based programme you can run and report on. EPSS and SSVC triage, SLAs by criticality, and metrics your board will read.",
+    packages: [
+      "Rapid Exposure Review",
+      "Vulnerability Management Jumpstart",
+      "Security Metrics Toolkit",
+    ],
   },
   {
-    title: "Security Metrics Toolkit",
+    title: "Technical Risk Advisory",
+    href: "/services#technical-risk-advisory",
     description:
-      "Professional PowerBI dashboard implementation aligned to NIST SP 800-53 for visualising and tracking security metrics programmes.",
+      "Connecting technical findings to business risk so leadership can act on them. Risk taxonomy, KRIs and KPIs, and remediation that outlives the pen test report.",
+    packages: [
+      "Technical Risk Management Accelerator",
+      "Pen Test Readiness & Remediation",
+    ],
   },
   {
-    title: "Cyber Essentials",
+    title: "Cyber Essentials Readiness",
+    href: "/services#cyber-essentials-readiness",
     description:
-      "Expert implementation services to prepare your organisation for UK Government-backed Cyber Essentials accreditation. Pass first time.",
-  },
-  {
-    title: "Pen Test Support",
-    description:
-      "End-to-end penetration testing support covering assessment scoping, procurement, finding triage, and converting technical findings into actionable business changes.",
+      "Certification preparation with a first-time pass as the goal. Gap analysis, control implementation, evidence, and certification body liaison.",
+    packages: ["Cyber Essentials Implementation"],
   },
 ];
 
@@ -53,7 +61,7 @@ export function Services() {
   };
 
   const handleCaseStudiesClick = () => {
-    window.location.href = "/services#bespoke-consulting";
+    window.location.href = "/services#engagements";
   };
 
   const handleContactClick = () => {
@@ -87,12 +95,13 @@ export function Services() {
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             data-testid="text-services-intro"
           >
-            Choose from bespoke engagements for complex, cross-functional challenges or
-            pre-defined work packages for defined outcomes with transparent scope and timelines.
+            Three areas of work, delivered personally. Each one can be scoped to your
+            organisation, or run as a fixed-scope package with a stated timeline and
+            defined deliverables.
           </p>
         </div>
 
-        {/* Featured: Bespoke Consulting */}
+        {/* Featured: proof of delivery */}
         <Card
           className="p-8 mb-10 overflow-visible border-primary/20 bg-card/60"
           data-testid="card-bespoke-featured"
@@ -100,17 +109,17 @@ export function Services() {
         >
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <div>
-              <Badge className="mb-4">Primary Service</Badge>
+              <Badge className="mb-4">Proven delivery</Badge>
               <h3
                 className="font-heading text-2xl font-bold mb-4"
                 data-testid="heading-bespoke"
               >
-                Bespoke Consulting
+                Where this has worked
               </h3>
               <p className="text-muted-foreground mb-6">
-                Tailored engagements for complex, cross-functional security challenges with
-                proven outcomes across government and enterprise. Spanning vulnerability
-                management, security transformation, and strategic advisory.
+                Engagements across UK government, critical national infrastructure, and
+                global enterprise &mdash; spanning vulnerability management, security
+                transformation, and strategic advisory.
               </p>
               <Button
                 variant="outline"
@@ -139,19 +148,28 @@ export function Services() {
           </div>
         </Card>
 
-        {/* 4 Service Cards */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-12" data-reveal-stagger>
+        {/* Three areas of work */}
+        <div className="grid gap-6 md:grid-cols-3 mb-12" data-reveal-stagger>
           {serviceCards.map((service, idx) => (
             <Card
               key={idx}
-              className="p-6 overflow-visible text-center"
+              className="p-6 overflow-visible flex flex-col"
               data-testid={`card-service-${idx + 1}`}
               data-reveal-item
             >
               <h3 className="font-heading text-lg font-semibold mb-3">
                 {service.title}
               </h3>
-              <p className="text-sm text-muted-foreground">{service.description}</p>
+              <p className="text-sm text-muted-foreground mb-5 flex-1">
+                {service.description}
+              </p>
+              <ul className="space-y-2 border-t border-border pt-4">
+                {service.packages.map((name) => (
+                  <li key={name} className="text-sm border-l-2 border-primary/40 pl-3">
+                    {name}
+                  </li>
+                ))}
+              </ul>
             </Card>
           ))}
         </div>

@@ -31,10 +31,10 @@ const navItems = [
 ];
 
 const mobileServicesLinks = [
-  { label: "Bespoke Consulting", href: "/services#bespoke-consulting" },
-  { label: "Pre-defined Work Packages", href: "/services#work-packages" },
-  { label: "Security Metrics Toolkit", href: "/services#security-metrics-toolkit" },
-  { label: "Cyber Essentials", href: "/services#cyber-essentials" },
+  { label: "Vulnerability & Exposure Management", href: "/services#vulnerability-exposure-management" },
+  { label: "Technical Risk Advisory", href: "/services#technical-risk-advisory" },
+  { label: "Cyber Essentials Readiness", href: "/services#cyber-essentials-readiness" },
+  { label: "Selected Engagements", href: "/services#engagements" },
 ];
 
 export function Navigation() {

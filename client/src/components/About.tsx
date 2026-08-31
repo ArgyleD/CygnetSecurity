@@ -84,16 +84,16 @@ export function About() {
             </h2>
 
             <p className="text-muted-foreground mb-5">
-              Cygnet Security was founded by Ryan Ward-McConville, a cybersecurity leader with over a decade advising executive and senior leadership on risk across government, financial services, and global enterprise. Ryan combines deep technical expertise with strong business acumen to design security programmes that protect what matters, translating complex risk into clear, actionable outcomes for leadership teams.
+              I&rsquo;m Ryan Ward-McConville. I&rsquo;ve spent over a decade advising executive and senior leadership on risk across government, financial services, and global enterprise &mdash; combining deep technical expertise with the business context leadership teams need, and translating complex risk into decisions they can actually make.
             </p>
 
             <p className="text-muted-foreground mb-8">
-              Founded in 2018, Cygnet Security delivers bespoke consulting that addresses the root causes of security exposure, not surface-level fixes. Engagements span vulnerability management, threat modelling, security transformation, and strategic advisory, with outcomes measured against business risk rather than technical metrics alone.
+              I founded Cygnet Security in 2018 to do consulting that addresses the root causes of security exposure rather than surface-level fixes. My engagements span vulnerability management, threat modelling, security transformation, and strategic advisory, with outcomes measured against business risk rather than technical metrics alone.
             </p>
 
             <div className="border-l-2 border-primary pl-4 mb-8 py-1">
               <p className="text-sm font-semibold leading-relaxed">
-                Every engagement is delivered personally by Ryan. No account managers. No handoffs. No junior resources. Clients work directly with a senior practitioner from initial scoping through to delivery. For continuity of service, Cygnet Security maintains relationships with a trusted network of vetted associate practitioners and documented handover procedures &mdash; ensuring engagements remain on track even when surge capacity or specialist cover is required.
+                Every engagement is delivered by me personally. No account managers. No handoffs. No junior resources. You work directly with a senior practitioner from initial scoping through to delivery. For continuity of service, I maintain relationships with a trusted network of vetted associate practitioners and documented handover procedures &mdash; so engagements stay on track when surge capacity or specialist cover is required.
               </p>
             </div>
 
