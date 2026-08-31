@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { navigateToSection } from "@/lib/utils";
 
 const servicesLinks = [
   { label: "Vulnerability & Exposure Management", href: "/services#vulnerability-exposure-management" },
@@ -12,6 +13,7 @@ const servicesLinks = [
 
 export function ServicesDropdown() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,16 +41,18 @@ export function ServicesDropdown() {
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-card-border rounded-md shadow-lg py-2 z-50">
           {servicesLinks.map((link) => (
-            <Link key={link.label} href={link.href}>
-              <Button
-                variant="ghost"
-                className="w-full justify-start px-4 py-2 text-sm hover-elevate active-elevate-2"
-                onClick={() => setIsOpen(false)}
-                data-testid={`link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                {link.label}
-              </Button>
-            </Link>
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection(link.href, location, () => setIsOpen(false));
+              }}
+              className="block w-full px-4 py-2 text-sm text-left rounded-md hover-elevate active-elevate-2"
+              data-testid={`link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              {link.label}
+            </a>
           ))}
         </div>
       )}

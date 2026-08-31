@@ -2,11 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, CheckCircle2, Building2, TrendingUp, Shield, ArrowRight, BarChart3, FileCheck } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "wouter";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useHashScroll } from "@/hooks/useHashScroll";
 import { navigateToSection } from "@/lib/utils";
 
 const predefinedServices = [
@@ -263,18 +264,7 @@ export default function ServicesPage() {
   const [location] = useLocation();
   useScrollReveal();
 
-  useEffect(() => {
-    // Handle hash-based navigation within the page
-    const hash = window.location.hash;
-    if (hash) {
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
-  }, [location]);
+  useHashScroll(location);
 
   const handleContactClick = () => navigateToSection("#contact", location);
 

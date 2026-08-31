@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useHashScroll } from "@/hooks/useHashScroll";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
@@ -80,17 +80,7 @@ export default function Home() {
   const [location] = useLocation();
   useScrollReveal();
 
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    }
-  }, [location]);
+  useHashScroll(location);
 
   return (
     <div className="min-h-screen">
