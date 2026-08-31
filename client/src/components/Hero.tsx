@@ -34,16 +34,16 @@ export function Hero() {
           className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed"
           data-testid="text-hero-subtitle"
         >
-          Over a decade advising executive and senior leadership on risk. Cygnet Security
-          designs and operates assurance processes that connect technical risk to measurable
-          business outcomes for government and enterprise.
+          Over a decade advising executive and senior leadership on risk. I design and
+          operate assurance processes that connect technical risk to measurable business
+          outcomes for government and enterprise.
         </p>
 
         <p
           className="text-sm text-muted-foreground/70 mb-8 tracking-wide"
           data-testid="text-hero-differentiator"
         >
-          Solo practitioner &mdash; no account managers, no junior resources. You work directly with a senior consultant from day one.
+          Solo practitioner &mdash; no account managers, no junior resources. You work directly with me from day one.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
