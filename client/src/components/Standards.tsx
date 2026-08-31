@@ -20,7 +20,7 @@ const standards = [
     items: [
       { name: "PCI-DSS", description: "Payment card industry compliance" },
       { name: "HMG Security Standards", description: "UK government security requirements" },
-      { name: "Cyber Essentials Plus", description: "UK cyber security certification" },
+      { name: "Cyber Essentials Plus", description: "UK cybersecurity certification" },
     ],
   },
   {
