@@ -71,6 +71,12 @@ export function Services() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16" data-reveal>
+          <p
+            className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-4"
+            data-testid="eyebrow-services"
+          >
+            What I do
+          </p>
           <h2
             className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
             data-testid="heading-services"

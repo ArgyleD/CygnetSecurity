@@ -70,6 +70,12 @@ export function About() {
 
           {/* Bio content */}
           <div>
+            <p
+              className="text-xs uppercase tracking-[0.2em] text-primary font-medium mb-3"
+              data-testid="eyebrow-about"
+            >
+              Who you&rsquo;re working with
+            </p>
             <h2
               className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               data-testid="heading-about"
