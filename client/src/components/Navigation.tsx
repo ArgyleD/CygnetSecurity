@@ -75,9 +75,14 @@ export function Navigation() {
                 className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
                 data-testid="link-home"
               >
-                <BrandMark className="h-[46px] w-[46px]" />
-                <span className="font-heading font-semibold text-xl">
-                  Cygnet Security
+                <BrandMark className="h-9 w-9 sm:h-[46px] sm:w-[46px]" />
+                <span className="flex flex-col items-start leading-none">
+                  <span className="font-heading font-semibold text-lg sm:text-xl whitespace-nowrap">
+                    Cygnet Security
+                  </span>
+                  <span className="hidden sm:block text-[10px] uppercase tracking-[0.2em] text-primary font-medium mt-1 whitespace-nowrap">
+                    Cybersecurity Consulting
+                  </span>
                 </span>
               </button>
             </Link>

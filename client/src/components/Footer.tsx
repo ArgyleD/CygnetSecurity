@@ -14,8 +14,13 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <BrandMark className="h-9 w-9" />
-              <span className="font-heading font-semibold text-lg">
-                Cygnet Security
+              <span className="flex flex-col items-start leading-none">
+                <span className="font-heading font-semibold text-lg">
+                  Cygnet Security
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.2em] text-primary font-medium mt-1">
+                  Cybersecurity Consulting
+                </span>
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
