@@ -43,7 +43,7 @@ export function About() {
             "Cybersecurity doesn't have to be a cost centre. With the right assurance, it becomes a tool for streamlining how your business works."
           </blockquote>
           <cite className="not-italic text-sm font-medium text-primary">
-            Ryan Ward-McConville, Founder — Cygnet Security
+            Ryan Ward-McConville, Director — Cygnet Security
           </cite>
         </div>
 
@@ -57,14 +57,14 @@ export function About() {
           >
             <img
               src={headshotImage}
-              alt="Ryan Ward-McConville, Founder of Cygnet Security"
+              alt="Ryan Ward-McConville, Director of Cygnet Security"
               className="w-full object-cover object-top"
               style={{ aspectRatio: "3/4" }}
               data-testid="img-headshot"
             />
             <div className="px-4 py-3 border-t border-border text-center">
               <p className="font-heading text-sm font-semibold">Ryan Ward-McConville</p>
-              <p className="text-xs text-primary font-medium mt-0.5">Founder, Cygnet Security</p>
+              <p className="text-xs text-primary font-medium mt-0.5">Director, Cygnet Security</p>
             </div>
           </div>
 

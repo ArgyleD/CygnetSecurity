@@ -1,5 +1,5 @@
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
-import { LOGO_FILTER, CONTACT_EMAIL } from "@/lib/constants";
+import { BrandMark } from "./BrandMark";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,12 +13,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src={logoImage}
-                alt="Cygnet Security Logo - Cybersecurity Consulting"
-                className="h-9 w-9"
-                style={{ filter: LOGO_FILTER }}
-              />
+              <BrandMark className="h-9 w-9" />
               <span className="font-heading font-semibold text-lg">
                 Cygnet Security
               </span>

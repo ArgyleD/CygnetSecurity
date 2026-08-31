@@ -20,8 +20,8 @@ function WhatsAppIcon({ className }: { className?: string }) {
     </svg>
   );
 }
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
-import { LOGO_FILTER, CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_URL } from "@/lib/constants";
+import { BrandMark } from "./BrandMark";
+import { CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_URL } from "@/lib/constants";
 import { navigateToSection } from "@/lib/utils";
 
 const navItems = [
@@ -75,12 +75,7 @@ export function Navigation() {
                 className="flex items-center gap-2 hover-elevate active-elevate-2 px-2 py-1 rounded-md"
                 data-testid="link-home"
               >
-                <img
-                  src={logoImage}
-                  alt="Cygnet Security Logo - Cybersecurity Consulting"
-                  className="h-[46px] w-[46px]"
-                  style={{ filter: LOGO_FILTER }}
-                />
+                <BrandMark className="h-[46px] w-[46px]" />
                 <span className="font-heading font-semibold text-xl">
                   Cygnet Security
                 </span>
@@ -186,12 +181,7 @@ export function Navigation() {
               {/* Panel header */}
               <div className="flex items-center justify-between px-6 h-16 border-b border-card-border shrink-0">
                 <div className="flex items-center gap-2">
-                  <img
-                    src={logoImage}
-                    alt="Cygnet Security Logo"
-                    className="h-8 w-8"
-                    style={{ filter: LOGO_FILTER }}
-                  />
+                  <BrandMark className="h-8 w-8" />
                   <span className="font-heading font-semibold text-base">
                     Cygnet Security
                   </span>

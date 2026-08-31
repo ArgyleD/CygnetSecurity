@@ -1,20 +1,14 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
-import logoImage from "@assets/2025-Logo-Cropped-BP - Copy_1760951178028.png";
-import { LOGO_FILTER } from "@/lib/constants";
+import { BrandMark } from "@/components/BrandMark";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="text-center">
         <div className="inline-flex p-4 bg-primary/10 rounded-full mb-6">
-          <img 
-            src={logoImage} 
-            alt="Cygnet Security Logo - Cybersecurity Consulting" 
-            className="h-20 w-20"
-            style={{ filter: LOGO_FILTER }}
-          />
+          <BrandMark className="h-20 w-20" />
         </div>
         <h1
           className="font-heading text-6xl font-bold mb-4"
